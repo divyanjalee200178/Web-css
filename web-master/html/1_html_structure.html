@@ -4,13 +4,369 @@
     <meta charset="UTF-8">
     <title>Home page</title>
 </head>
+<style>
+    header{
+        position: fixed;
+        width: 100vw;
+        background: #E4D00A;
+        top: 0;
+        height: 80px;
+        z-index: 1;
+    }
+    #header_logo{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        top: 12px;
+        position: absolute;
+        left: 20px;
+        border: 2px solid red;
+    }
+    #header_text{
+        margin-left: 80px;
+        margin-top: 30px;
+        color: midnightblue;
+        position: absolute;
+        font-size: 20px;
+        font-style: italic;
+    }
+    header>nav{
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+    header>nav>ul{
+        list-style: none;
+        margin: 0px;
+    }
+    header>nav>ul>li{
+        padding: 0px 30px;
+        display: inline;
+    }
+    header>nav>ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    footer{
+        background: #02011B;
+        color: white;
+        position: absolute;
+        width: 100%;
+        margin: -10px ;
+    }
+    #Contact{
+        font-size: 50px;
+        margin: 5px 0px;
+        padding: 20px;
+        text-align: center;
+    }
+    #hero{
+        margin-top: 50px;
+        padding: 20px;
+        width: 100vw;
+        height: fit-content;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: #02011B;
+    }
+    /*#hero>h2{*/
+    /*    color: white;*/
+    /*}*/
+    #name-icon{
+        width: 80px;
+        height: 80px;
+        margin-top: 100px;
+        display: flex;
+        left: 100px;
+        position: absolute;
+        border: 2px solid red;
+    }
+    #name{
+        margin-top: 130px;
+        color: white;
+        position: absolute;
+        left: 200px;
+        font-style: italic;
+        font-size: 20px;
+    }
+    /*#hero>section:nth-child(2)>div>h2{*/
+    /*    color: white;*/
+    /*    margin-top: 200px;*/
+    /*}*/
+    #About-me{
+        display: flex;
+        color: #F8FD72;
+        margin-top: 0px;
+        left: 100px;
+        top: 300px;
+        position: absolute;
+        font-style: italic;
+
+    }
+    #abo>h3{
+        display: flex;
+        color: white;
+        margin-left: 70px;
+        left: 30px;
+        top: 320px;
+        position: absolute;
+        width: 600px;
+    }
+    #abo>button{
+        margin: 380px -350px;
+        background: yellow;
+        border: none;
+        outline: none;
+        margin-right: 100px;
+        padding: 0 25px;
+        border-radius:  25px 25px 25px 25px;
+        color: black;
+        cursor: pointer;
+        height: 30px;
+        box-shadow: rgba(212, 9, 218, 0.56) 0px 22px 70px 4px;;
+    }
+    #abo>button:hover{
+        background: red;
+    }
+    #my{
+        margin-left: 200px;
+        width: 300px;
+        height: 500px;
+        position: absolute;
+        border: 2px solid #2840e3;
+        margin-top: 50px;
+        border-radius: 100%;
+        left: 700px;
+        /*justify-self: end;*/
+        box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #social>span{
+        position: absolute;
+       top: 550px;
+        left: 300px;
+        padding: 0px 30px;
+    }
+
+    #assi{
+        width: 100vw;
+        padding: 20px;
+        height: fit-content;
+        box-sizing: border-box;
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        background: #02011B;
+        position: relative;
+    }
+    #Assignment{
+        position: absolute;
+        color: white;
+        margin-top: 50px;
+    }
+    #assi>section:first-child>div:first-child>img{
+        margin-top: 20px;
+    }
+
+    #assi>section>div:first-child>img{
+        margin-top: 5px;
+        bottom: 0;
+        margin-left: 10px;
+    }
+    #assi>section>div:first-child>span{
+        top: 5px;
+        position: absolute;
+        left: 70px;
+    }
+    #assi>section>div:nth-child(2)>nav>ul{
+        list-style: none;
+        margin: 0px;
+    }
+    #assi>section>div:nth-child(2)>nav>ul>li{
+        padding: 0px 10px;
+        display: inline;
+        top: 5px;
+        position: absolute;
+        left: 40px;
+    }
+    #assi>section>div:nth-child(2)>nav>ul>li:first-child>a{
+        position: absolute;
+        left: 220px;
+        width: 200px;
+    }
+    #assi>section>div:nth-child(2)>nav>ul>li:last-child>a{
+        position: absolute;
+        left: 260px;
+        width: 200px;
+    }
+
+
+    #assi>section:first-child>div:first-child>img{
+        margin-top: 20px;
+    }
+    #assi>section{
+        background: white;
+        width: 350px;
+        height: 30px;
+        left: 100px;
+        top: 460px;
+        position: absolute;
+        border-radius: 25px 25px 25px 25px;
+    }
+    #assi>section:first-child{
+        top: 160px;
+    }
+    #assi>section:nth-child(2){
+        top: 160px;
+    }
+    #assi>section:nth-child(3){
+        top: 220px;
+    }
+    #assi>section:nth-child(4){
+        top: 280px;
+    }
+    #assi>section:nth-child(5){
+        top: 340px;
+    }
+    #assi>section:nth-child(6){
+        top: 400px;
+    }
+    #assi>img{
+        margin-left: 700px;
+        margin-top: 100px;
+        height: 450px;
+        width: 600px;
+        border-radius: 100%;
+        border: 2px solid red;
+    }
+    .secPro{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background:#02011B ;
+        width: 100vw;
+
+    }
+    .secPro>div{
+        border: 2px solid white;
+        padding: 20px;
+        margin: 100px auto;
+    }
+    .secPro>div>div{
+        max-width: 300px;
+        background: yellowgreen;
+        padding: 10px;
+        text-align: center;
+        margin: 10px auto;
+        border-radius: 20px;
+        border: 4px solid purple;
+    }
+    #pro{
+        position: relative;
+        background: #02011B;
+        width: 100vw;
+    }
+    #Project {
+        position: absolute;
+        color: white;
+        margin-bottom: 0px;
+    }
+    .About{
+        background: #02011B;
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        margin-top: -25px;
+    }
+    #Abouts{
+        color: white;
+    }
+    .text{
+        color: white;
+    }
+    .secAbout{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .secAbout>div{
+        padding: 0px;
+        margin: 10px 20px;
+    }
+    .secAbout>div:nth-child(2){
+        color: white;
+    }
+    #skills{
+        position: absolute;
+        width: 100vw;
+        height: fit-content;
+        background: #02011B;
+    }
+    #Skill{
+        color: yellowgreen;
+        text-align: center;
+    }
+    #secSkill>div{
+        color: white;
+        margin: 50px 30px;
+    }
+    #secGallery{
+        position: absolute;
+        background: #02011B;
+        width: 100vw;
+        height: fit-content;
+    }
+    #secGallery>div:first-child{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*grid-template-rows: repeat(2, 1fr);*/
+    }
+    #secGallery>div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #secGallery>div:first-child>img{
+        width: 300px;
+        height:500px;
+    }
+    #secGallery>div:nth-child(2)>img{
+        margin: 50px 30px;
+        width: 300px;
+        height:500px;
+    }
+    .secEvent{
+        position: absolute;
+        width: 100vw;
+        height: fit-content;
+        background: #02011B;
+        margin-top: -20px;
+    }
+    #Event{
+        color: yellowgreen;
+        text-align: center;
+    }
+    .secEvent>h3{
+        color: white;
+        margin: 10px 20px;
+    }
+    .secEvent>div{
+        margin: 20px 40px;
+    }
+    @media all and (max-width: 768px) {
+        .secPro{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+</style>
 <body>
 <!--        *********  header section  ********-->
     <header>
         <!--        *********  logo section  ********-->
         <div>
-            <img src="../assets/name_icon.jpeg" height="50px">
-            <span>Indu</span>
+            <img id="header_logo" src="../assets/name_icon.jpeg" height="50px">
+            <span id="header_text">Indu</span>
         </div>
 
 
@@ -22,15 +378,15 @@
               </li>
 
               <li >
-                  <a href="1_html_structure.html#Assignment">Assignment</a>
+                  <a href="1_html_structure.html#assi">Assignment</a>
               </li>
 
               <li>
-                  <a href="1_html_structure.html#Project">Project</a>
+                  <a href="1_html_structure.html#pro">Project</a>
               </li>
 
               <li>
-                  <a href="1_html_structure.html#About">About</a>
+                  <a href="1_html_structure.html#Abouts">About</a>
               </li>
 
               <li>
@@ -38,7 +394,7 @@
               </li>
 
               <li>
-                  <a href="1_html_structure.html#Gallery">Gallery</a>
+                  <a href="1_html_structure.html#secGallery">Gallery</a>
               </li>
 
               <li>
@@ -52,29 +408,30 @@
       </nav>
     </header>
 <!--        *********  hero section  ********-->
-    <main>
-        <h2 id="Home">Home</h2>
-        <section>
+    <main id="hero">
+<!--        <h2 id="Home">*</h2>-->
+        <section id="Home">
             <div>
-                <img src="../assets/name_icon.jpeg" height="80px">
-                <span >Indumini Silva</span>
+                <img id="name-icon" src="../assets/name_icon.jpeg" >
+                <span id="name" >Indumini Silva</span>
             </div>
         </section>
+
         <!--        *********  About section  ********-->
         <section>
-            <div>
-                <h2>About me</h2>
+            <div id="abo">
+                <h2 id="About-me">About me</h2>
                 <h3>Hello, I’m Indumini Divyanjalee Silva. As an undergraduate software engineer,I embark on a journey fueled by curiosity and passion for crafting innovative solutions.</h3>
                 <button>Download CV</button>
             </div>
         </section>
 
         <br>
-        <img src="../assets/My_photo.jpeg" height="400px">
+        <img id="my" src="../assets/My_photo.jpeg" height="400px">
 
         <!--        *********  social icon section  ********-->
         <section>
-            <div>
+            <div id="social">
                 <span>
                     <img src="../assets/linkedIn.png" height="40px" width="40px">
                     <img src="../assets/facebook.png" height="40px" width="40px">
@@ -86,10 +443,10 @@
         </section>
     </main>
 <!--        **********  start assignment page  ***********-->
-    <main>
+    <main id="assi">
         <h1 id="Assignment">Assignment</h1>
         <!--        ********** assignment 01   ***********-->
-        <section>
+        <section >
             <div>
                     <img src="../assets/assi.jfif" height="20px">
                     <span>Assignment 01</span>
@@ -112,7 +469,7 @@
         </section>
 
         <!--        ********** assignment 02   ***********-->
-        <section>
+        <section >
             <div>
                 <img src="../assets/assi.jfif" height="20px">
                 <span>Assignment 02</span>
@@ -226,105 +583,112 @@
             </div>
         </section>
         
-        <img src="../assets/lap_aasi.webp" height="200px">
+        <img src="../assets/lap_aasi.webp" >
     </main>
+
 <!--        ********** project section  ***********-->
-    <main>
-        <h2 id="Project">Poject</h2>
+    <main id="pro">
+        <h2 id="Project">Project</h2>
         <!--        ********** project 01 section  ***********-->
-        <section>
-            <img src="../assets/game.jpeg">
+        <section class="secPro">
             <div>
-                <h1>Connect for game</h1>
-                <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
+                <div>
+                    <img id="game" src="../assets/game.jpeg">
+                    <h1>Connect for game</h1>
+                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
+                    <button>view</button>
+                    <br><br>
+                </div>
             </div>
-            <button>view</button>
-            <br><br>
-        </section>
 
-        <!--        ********** project 02 section  ***********-->
-        <section>
-            <img src="../assets/management.jfif">
+            <!--        ********** project 02 section  ***********-->
             <div>
-                <h1>Connect for game</h1>
-                <h3>This project represents a comprehensive approach to addressing organizational needs through intuitive user interfaces, efficient data management, and seamless integration of key functionalities.</h3>
+                <div>
+                        <img id="manage" src="../assets/management.jfif" height="140px" width="250px">
+                        <h1>Connect for game</h1>
+                        <h3>This project represents a comprehensive approach to addressing organizational needs through intuitive user interfaces, efficient data management, and seamless integration of key functionalities.</h3>
+                        <button>view</button>
+                </div>
             </div>
-            <button>view</button>
-        </section>
 
-        <!--        ********** project 03 section  ***********-->
-        <section>
-            <img src="../assets/game.jpeg">
-            <div>
-                <h1>Connect for game</h1>
-                <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
-            </div>
-            <button>view</button>
-        </section>
+            <!--        ********** project 03 section  ***********-->
+                <div>
+                    <div>
+                        <img id="game2" src="../assets/game.jpeg" height="210px">
+                        <h1>Connect for game</h1>
+                        <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
+                        <button>view</button>
+                    </div>
+                </div>
+            </section>
+
+
     </main>
 <!--        ********** About section  ***********-->
 
-    <main>
-        <h1 id="About">About me</h1>
+    <main class="About">
+        <h1 id="Abouts">About me</h1>
         <!--        ********** About my school section  ***********-->
-        <section>
+        <section class="secAbout">
             <div>
-                <h2>About my school</h2>
-                <h4>My educational journey began at Kalutara Gnanodaya Maha Vidyalaya, a distinguished institution known for its commitment to academic excellence and holistic development.</h4>
-                <h4>Situated in Kalutara discrict, Sri Lanka, Gnanodaya Maha Vidyalaya provided me with a robust foundation that has shaped my academic and personal growth.</h4>
-                <h4>At Gnanodaya Maha Vidyalaya, I successfully completed my Ordinary Level (O/L) examinations and Advanced Level (A/L) examinations.</h4>
-                <h4>I successfully completed my IT Diploma.</h4>
+                <h2 class="text">About my school</h2>
+                <h4 class="text">My educational journey began at Kalutara Gnanodaya Maha Vidyalaya, a distinguished institution known for its commitment to academic excellence and holistic development.</h4>
+                <h4 class="text">Situated in Kalutara discrict, Sri Lanka, Gnanodaya Maha Vidyalaya provided me with a robust foundation that has shaped my academic and personal growth.</h4>
+                <h4 class="text">At Gnanodaya Maha Vidyalaya, I successfully completed my Ordinary Level (O/L) examinations and Advanced Level (A/L) examinations.</h4>
+                <h4 class="text"> I successfully completed my IT Diploma.</h4>
+                <img src="../assets/school.jpg" height="100px">
             </div>
-            <img src="../assets/school.jpg" height="100px">
-        </section>
+
+
 
         <!--        ********** About my Institute  ***********-->
-        <section>
+
             <div>
                 <h2>About my Institute</h2>
                 <h4>Building upon my secondary education, I enrolled at the Institute of Software Engineering (IJSE), driven by its reputation for excellence in software development education.</h4>
+                <img src="../assets/Ijse.jfif" height="100px">
             </div>
         </section>
-        <img src="../assets/Ijse.jfif" height="100px">
+
     </main>
 
 <!--        ********** Skill section  ***********-->
-    <main>
+    <main id="skills">
         <h1 id="Skill">My Skill</h1>
         <!--        ********** Java section  ***********-->
-        <section>
+        <section class="secSkill">
             <div>
                 <h3>Java</h3>
                 <h5>A powerful, object-oriented programming language renowned or its reliability and cross -platform capabilities.</h5>
             </div>
-        </section>
+
 
         <!--        ********** mysql section  ***********-->
-        <section>
+
             <div>
                 <h3>MySQL</h3>
                 <h5>An open-source relational database management system (RDBMS) known for its reliability, speed, and ease of use.</h5>
             </div>
-        </section>
+
 
         <!--        ********** mysql section  ***********-->
-        <section>
+
             <div>
                 <h3>Java sc</h3>
                 <h5>An open-source relational database management system (RDBMS) known for its reliability, speed, and ease of use.</h5>
             </div>
-        </section>
+
 
         <!--        ********** HTML section  ***********-->
-        <section>
+
             <div>
                 <h3>HTML</h3>
                 <h5>HyperText Markup Language (HTML) is the foundational language for creating and structuring web content.</h5>
             </div>
-        </section>
+
 
         <!--        ********** CSS section  ***********-->
-        <section>
+
             <div>
                 <h3>CSS</h3>
                 <h5>Cascading Style Sheets (CSS) is a stylesheet language used to control the presentation and layout of web pages.</h5>
@@ -334,24 +698,27 @@
 
 <!--        ********** Gallery section  ***********-->
     <main>
-        <section>
+        <section id="secGallery">
             <div>
-                <img src="../assets/Gallery/my.jpeg" height="100px" id="Gallery">
-                <img src="../assets/Gallery/group.jpeg" height="100px">
-                <img src="../assets/Gallery/my2.jpeg" height="100px"><br>
-                <img src="../assets/Gallery/oran.jpeg" height="100px">
-                <img src="../assets/Gallery/setificate.jpeg" height="100px">
-                <img src="../assets/Gallery/innove.jpeg" height="100px">
+                <img src="../assets/Gallery/my.jpeg">
+                <img src="../assets/Gallery/group.jpeg">
+                <img src="../assets/Gallery/my2.jpeg">
+            </div>
+            <div>
+                <img src="../assets/Gallery/oran.jpeg">
+                <img src="../assets/Gallery/setificate.jpeg">
+                <img src="../assets/Gallery/innove.jpeg">
             </div>
         </section>
     </main>
 
 <!--        ********** Event section  ***********-->
 
-    <main>
+
+        <section class="secEvent">
         <h2 id="Event">Event</h2>
         <!--        ********** photos section  ***********-->
-        <section>
+
             <div>
                 <img src="../assets/Gallery/group.jpeg" height="100px">
                 <img src="../assets/Gallery/setificate.jpeg" height="80px">
@@ -359,17 +726,18 @@
             </div>
             <h3>During my first semester at the Institute of
                 Software Engineering (IJSE), my team participated in an intensive group competition named "Innovesta." This project was a pivotal experience that allowed us to apply our learning in a real-world scenario, competing against other talented teams within the institute.</h3>
-        </section>
+
 
         <!--        ********** photos section  ***********-->
-        <section>
+
             <div>
                 <img src="../assets/Gallery/welcome.jpeg" height="100px">
                 <img src="../assets/Gallery/eg.jpeg" height="100px">
             </div>
             <h3>This is refreshing  party organized by our  institute for our batch at the Institute of Java Software Engineering (IJSE).</h3>
+
         </section>
-    </main>
+
 
 <!--        ********** footer section  ***********-->
     <footer>
