@@ -7,7 +7,7 @@
 <style>
     header{
         position: fixed;
-        width: 100vw;
+        width: 99%;
         background: #E4D00A;
         top: 0;
         height: 80px;
@@ -55,8 +55,9 @@
         background: #02011B;
         color: white;
         position: absolute;
-        width: 100%;
-        margin: -10px ;
+        width: 99%;
+        height: 600px;
+        margin: 0px ;
     }
     #Contact{
         font-size: 50px;
@@ -67,8 +68,8 @@
     #hero{
         margin-top: 50px;
         padding: 20px;
-        width: 100vw;
-        height: fit-content;
+        width: 100%;
+        height: 500px;
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -141,7 +142,7 @@
         border: 2px solid #2840e3;
         margin-top: 50px;
         border-radius: 100%;
-        left: 700px;
+        left: 800px;
         /*justify-self: end;*/
         box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
@@ -153,7 +154,7 @@
     }
 
     #assi{
-        width: 100vw;
+        width: 100%;
         padding: 20px;
         height: fit-content;
         box-sizing: border-box;
@@ -246,7 +247,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         background:#02011B ;
-        width: 100vw;
+        width: 100%;
 
     }
     .secPro>div{
@@ -266,7 +267,7 @@
     #pro{
         position: relative;
         background: #02011B;
-        width: 100vw;
+        width: 100%;
     }
     #Project {
         position: absolute;
@@ -275,7 +276,7 @@
     }
     .About{
         background: #02011B;
-        width: 100vw;
+        width: 100%;
         height: fit-content;
         position: relative;
         margin-top: -25px;
@@ -298,9 +299,9 @@
         color: white;
     }
     #skills{
-        position: absolute;
-        width: 100vw;
-        height: fit-content;
+        position: relative;
+        width: 100%;
+        height:600px;
         background: #02011B;
     }
     #Skill{
@@ -314,8 +315,8 @@
     #secGallery{
         position: relative;
         background: #02011B;
-        width: 100vw;
-        height: fit-content;
+        width: 100%;
+        height: 1000px;
     }
     #secGallery>div:first-child{
         display: grid;
@@ -337,21 +338,29 @@
     }
     .secEvent{
         position: relative;
-        width: 100vw;
-        height: fit-content;
+        width: 100%;
+        height:700px;
         background: #02011B;
         margin-top: -20px;
     }
     #Event{
-        color: yellowgreen;
+        position: absolute;
+        color: yellow;
+        top: 40px;
         text-align: center;
+
     }
     .secEvent>h3{
+        position: absolute;
         color: white;
         margin: 10px 20px;
     }
     .secEvent>div{
         margin: 20px 40px;
+    }
+    .secEvent>div:first-child>img{
+
+        margin-bottom: 100px;
     }
     @media all and (max-width: 768px) {
         .secPro{
