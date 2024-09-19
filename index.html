@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <style>
     header{
@@ -54,7 +59,7 @@
     footer{
         background: #02011B;
         color: white;
-        position: absolute;
+        position: relative;
         width: 100vw;
         height: 600px;
         margin: 0px ;
@@ -67,6 +72,7 @@
     }
     #hero{
         margin-top: 50px;
+        position: relative;
         padding: 20px;
         width: 100vw;
         height: 700px;
@@ -103,7 +109,7 @@
         display: flex;
         color: #F8FD72;
         margin-top: 0px;
-        left: 100px;
+        left: -650px;
         top: 300px;
         position: absolute;
         font-style: italic;
@@ -113,13 +119,13 @@
         display: flex;
         color: white;
         margin-left: 70px;
-        left: 30px;
+        right:  800px;
         top: 320px;
         position: absolute;
         width: 600px;
     }
     #abo>button{
-        margin: 380px -350px;
+        margin: 420px -350px;
         background: yellow;
         border: none;
         outline: none;
@@ -142,7 +148,7 @@
         border: 2px solid #2840e3;
         margin-top: 50px;
         border-radius: 100%;
-        left: 800px;
+        left: 700px;
         /*justify-self: end;*/
         box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
@@ -248,7 +254,7 @@
         grid-template-columns: repeat(3, 1fr);
         background:#02011B ;
         width: 100vw;
-
+        position: relative;
     }
     .secPro>div{
         border: 2px solid white;
@@ -303,15 +309,17 @@
         width: 100vw;
         height:600px;
         background: #02011B;
+        margin-top: -100px;
     }
     #Skill{
         color: yellowgreen;
         text-align: center;
     }
-    #secSkill>div{
+    .secSkill>div{
         color: white;
         margin: 50px 30px;
     }
+
     #secGallery{
         position: relative;
         background: #02011B;
@@ -360,10 +368,10 @@
     }
     .secEvent>div:first-child>img{
 
-        margin-bottom: 100px;
+        margin-bottom: -400px;
     }
     @media all and (max-width: 768px) {
-        .secPro{
+        .secPro>div>div{
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -373,7 +381,7 @@
 <!--        *********  header section  ********-->
 <header>
     <!--        *********  logo section  ********-->
-    <div>
+    <div class="animate__animated animate__bounce">
         <img id="header_logo" src="assets/name_icon.jpeg" height="50px">
         <span id="header_text">Indu</span>
     </div>
@@ -428,7 +436,9 @@
 
         <!--        *********  About section  ********-->
         <section>
-            <div id="abo">
+            <div id="abo" data-aos="fade-down"
+                 data-aos-easing="linear"
+                 data-aos-duration="1500">>
                 <h2 id="About-me">About me</h2>
                 <h3>Hello, I’m Indumini Divyanjalee Silva. As an undergraduate software engineer,I embark on a journey fueled by curiosity and passion for crafting innovative solutions.</h3>
                 <button>Download CV</button>
@@ -437,11 +447,11 @@
 
 
         <br>
-        <img id="my" src="assets/My_photo.jpeg" height="400px">
+        <img id="my" src="assets/My_photo.jpeg" height="400px" class="animate__animated animate__bounce">
 
         <!--        *********  social icon section  ********-->
-        <section>
-            <div id="social">
+        <section >
+            <div id="social" >
                 <span>
                     <img src="assets/linkedIn.png" height="40px" width="40px">
                     <img src="assets/facebook.png" height="40px" width="40px">
@@ -824,5 +834,11 @@
             </section>
         </main>
     </footer>
+
+<!--AOS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
