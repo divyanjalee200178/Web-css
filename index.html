@@ -61,8 +61,9 @@
         color: white;
         position: relative;
         width: 100vw;
-        height: 600px;
+        height: 800px;
         margin: 0px ;
+        top: -100px;
     }
     #Contact{
         font-size: 50px;
@@ -257,13 +258,12 @@
         position: relative;
     }
     .secPro>div{
-        border: 2px solid white;
         padding: 20px;
         margin: 100px auto;
     }
     .secPro>div>div{
         max-width: 300px;
-        background: yellowgreen;
+        background: #00ff00;
         padding: 10px;
         text-align: center;
         margin: 10px auto;
@@ -274,42 +274,80 @@
         position: relative;
         background: #02011B;
         width: 100vw;
+        bottom: 20px;
     }
     #Project {
         position: absolute;
         color: white;
-        margin-bottom: 0px;
+        margin-left: 700px;
+        margin-top: 50px;
+        top: 0px;
     }
+
     .About{
         background: #02011B;
         width: 100vw;
         height: fit-content;
         position: relative;
-        margin-top: -25px;
+        margin-top: -50px;
+    }
+    .secAbout{
+        display: grid;
+        grid-template-rows:  repeat(2, 1fr);
+        background:#02011B ;
+        width: 100vw;
+        position: relative;
     }
     #Abouts{
-        color: white;
+        color: #ffd700;
     }
     .text{
         color: white;
+        font-size: 20px;
+    }
+    #text1{
+        color: #00ffff;
+    }
+    #text2{
+        color: #00ffff;
     }
     .secAbout{
         display: grid;
         grid-template-rows: repeat(2, 1fr);
+
     }
     .secAbout>div{
         padding: 0px;
         margin: 10px 20px;
     }
+    .secAbout>div:first-child>img{
+        position: absolute;
+        left: 1000px;
+        bottom: 400px;
+        width: 400px;
+        height: 200px;
+    }
     .secAbout>div:nth-child(2){
         color: white;
+        font-size: 20px;
+    }
+    .secAbout>div:nth-child(2)>img{
+        position: absolute;
+        left: 1000px;
+        bottom: 100px;
+        width: 400px;
+        height: 200px;
+    }
+    .secAbout>div:nth-child(2){
+        color: white;
+        font-style: italic;
     }
     #skills{
         position: relative;
         width: 100vw;
-        height:600px;
+        height:800px;
         background: #02011B;
-        margin-top: -100px;
+        margin-top: -50px;
     }
     #Skill{
         color: yellowgreen;
@@ -317,14 +355,19 @@
     }
     .secSkill>div{
         color: white;
+        font-size: 25px;
         margin: 50px 30px;
     }
-
+    .type{
+        color: #E4D00A;
+        font-size: 30px;
+    }
     #secGallery{
         position: relative;
         background: #02011B;
         width: 100vw;
-        height: 1000px;
+        height: 1200px;
+
     }
     #secGallery>div:first-child{
         display: grid;
@@ -347,29 +390,67 @@
     .secEvent{
         position: relative;
         width: 100vw;
-        height:700px;
+        height:800px;
         background: #02011B;
-        margin-top: -20px;
+        top: -20px;
+    }
+    .secEvent {
+
+        display: grid;
+        grid-template-rows:    repeat(2, 1fr);
     }
     #Event{
         position: absolute;
         color: yellow;
-        top: 40px;
-        text-align: center;
-
+        top: -80px;
+        left: 50px;
+        right: 0;
     }
-    .secEvent>h3{
-        position: absolute;
+
+    #sec1>h3{
         color: white;
-        margin: 10px 20px;
+        position: absolute;
+        left: 500px;
+        top: 0;
     }
-    .secEvent>div{
-        margin: 20px 40px;
+    #sec1>img{
+        width: 200px;
+        height: 150px;
     }
-    .secEvent>div:first-child>img{
+    #sec1>img:first-child{
+        position: absolute;
+        left: 50px;
+    }
+    #sec1>img:nth-child(2){
+        position: absolute;
+        left: 250px;
+    }
+    #sect2>img{
+        width: 200px;
+        height: 150px;
+        position: absolute;
+        left: 1000px;
+    }
+    #sect2>img:nth-child(2){
+        width: 200px;
+        height: 150px;
+        position: absolute;
+        left: 1200px;
+    }
+    #sect2>h3{
+        color: white;
+        position: absolute;
+        left: 50px;
+        top: 400px;
+        display: inline;
+    }
+   #pic3{
+        position: absolute;
+        left: 140px;
+        top: 150px;
+    }
 
-        margin-bottom: -400px;
-    }
+
     @media all and (max-width: 768px) {
         .secPro>div>div{
             grid-template-columns: repeat(2, 1fr);
@@ -604,13 +685,16 @@
         </section>
         
         <img src="assets/lap_aasi.webp" >
+
     </main>
+
 
 <!--        ********** project section  ***********-->
     <main id="pro">
-        <h2 id="Project">Project</h2>
+
         <!--        ********** project 01 section  ***********-->
         <section class="secPro">
+            <h2 id="Project">Project</h2>
             <div>
                 <div>
                     <img id="game" src="assets/game.jpeg">
@@ -651,10 +735,10 @@
         <!--        ********** About my school section  ***********-->
         <section class="secAbout">
             <div>
-                <h2 class="text">About my school</h2>
-                <h4 class="text">My educational journey began at Kalutara Gnanodaya Maha Vidyalaya, a distinguished institution known for its commitment to academic excellence and holistic development.</h4>
-                <h4 class="text">Situated in Kalutara discrict, Sri Lanka, Gnanodaya Maha Vidyalaya provided me with a robust foundation that has shaped my academic and personal growth.</h4>
-                <h4 class="text">At Gnanodaya Maha Vidyalaya, I successfully completed my Ordinary Level (O/L) examinations and Advanced Level (A/L) examinations.</h4>
+                <h2 class="text" id="text1">About my school</h2>
+                <h4 class="text">My educational journey began at Kalutara Gnanodaya Maha Vidyalaya,<br> a distinguished institution known for its commitment to academic excellence and holistic development.</h4>
+                <h4 class="text">Situated in Kalutara discrict, Sri Lanka, Gnanodaya Maha Vidyalaya <br>provided me with a robust foundation that has shaped my academic and personal growth.</h4>
+                <h4 class="text">At Gnanodaya Maha Vidyalaya, I successfully completed my Ordinary Level (O/L)<br> examinations and Advanced Level (A/L) examinations.</h4>
                 <h4 class="text"> I successfully completed my IT Diploma.</h4>
                 <img src="assets/school.jpg" height="100px">
             </div>
@@ -664,8 +748,8 @@
         <!--        ********** About my Institute  ***********-->
 
             <div>
-                <h2>About my Institute</h2>
-                <h4>Building upon my secondary education, I enrolled at the Institute of Software Engineering (IJSE), driven by its reputation for excellence in software development education.</h4>
+                <h2 id="text2">About my Institute</h2>
+                <h4>Building upon my secondary education, I enrolled at the Institute of<br> Software Engineering (IJSE), driven by its reputation for excellence in software development <br>education.</h4>
                 <img src="assets/Ijse.jfif" height="100px">
             </div>
         </section>
@@ -678,7 +762,7 @@
         <!--        ********** Java section  ***********-->
         <section class="secSkill">
             <div>
-                <h3>Java</h3>
+                <h3 class="type">Java</h3>
                 <h5>A powerful, object-oriented programming language renowned or its reliability and cross -platform capabilities.</h5>
             </div>
 
@@ -686,7 +770,7 @@
         <!--        ********** mysql section  ***********-->
 
             <div>
-                <h3>MySQL</h3>
+                <h3 class="type">MySQL</h3>
                 <h5>An open-source relational database management system (RDBMS) known for its reliability, speed, and ease of use.</h5>
             </div>
 
@@ -694,7 +778,7 @@
         <!--        ********** mysql section  ***********-->
 
             <div>
-                <h3>Java sc</h3>
+                <h3 class="type">Java sc</h3>
                 <h5>An open-source relational database management system (RDBMS) known for its reliability, speed, and ease of use.</h5>
             </div>
 
@@ -702,7 +786,7 @@
         <!--        ********** HTML section  ***********-->
 
             <div>
-                <h3>HTML</h3>
+                <h3 class="type">HTML</h3>
                 <h5>HyperText Markup Language (HTML) is the foundational language for creating and structuring web content.</h5>
             </div>
 
@@ -710,7 +794,7 @@
         <!--        ********** CSS section  ***********-->
 
             <div>
-                <h3>CSS</h3>
+                <h3 class="type">CSS</h3>
                 <h5>Cascading Style Sheets (CSS) is a stylesheet language used to control the presentation and layout of web pages.</h5>
             </div>
         </section>
@@ -739,22 +823,28 @@
         <h2 id="Event">Event</h2>
         <!--        ********** photos section  ***********-->
 
-            <div>
-                <img src="assets/Gallery/group.jpeg" height="100px">
-                <img src="assets/Gallery/setificate.jpeg" height="80px">
-                <img src="assets/Gallery/innove.jpeg" height="80px">
-            </div>
-            <h3>During my first semester at the Institute of
-                Software Engineering (IJSE), my team participated in an intensive group competition named "Innovesta." This project was a pivotal experience that allowed us to apply our learning in a real-world scenario, competing against other talented teams within the institute.</h3>
+
+                <div id="sec1">
+                        <img src="assets/Gallery/group.jpeg" height="100px">
+                        <img src="assets/Gallery/setificate.jpeg" height="80px"><br>
+                        <img id="pic3" src="assets/Gallery/innove.jpeg" height="80px">
+                    <h3>During my first semester at the Institute of Software Engineering (IJSE), my team participated in an intensive group competition named "Innovesta." This project was a pivotal experience that allowed us to apply our learning in a real-world scenario, competing against other talented teams within the institute.</h3>
+                </div>
+
+                <!--        ********** photos section  ***********-->
+                <div id="sect2">
+                    <img src="assets/Gallery/welcome.jpeg" height="100px">
+                    <img src="assets/Gallery/eg.jpeg" height="100px">
+
+                    <h3>This is refreshing  party organized by our  institute for our batch at the Institute of Java <br>Software Engineering (IJSE).</h3>
+
+                </div>
 
 
-        <!--        ********** photos section  ***********-->
 
-            <div>
-                <img src="assets/Gallery/welcome.jpeg" height="100px">
-                <img src="assets/Gallery/eg.jpeg" height="100px">
-            </div>
-            <h3>This is refreshing  party organized by our  institute for our batch at the Institute of Java Software Engineering (IJSE).</h3>
+
+
+
 
         </section>
 
