@@ -76,7 +76,8 @@
         position: relative;
         padding: 20px;
         width: 100vw;
-        height: 700px;
+        /*height: 700px;*/
+        height: 100vh;
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -159,16 +160,19 @@
         left: 300px;
         padding: 0px 30px;
     }
-
     #assi{
+        background: #02011B;
         width: 100vw;
-        padding: 20px;
-        height: fit-content;
+        height:100vh;
+        bottom: 20px;
+        padding-top: 50px;
+    }
+    .secAssign{
         box-sizing: border-box;
         display: flex;
         grid-template-columns: repeat(2, 1fr);
-        background: #02011B;
-        position: relative;
+
+
     }
     #Assignment{
         position: absolute;
@@ -250,12 +254,20 @@
         border-radius: 100%;
         border: 2px solid red;
     }
+    #pro{
+        /*position: relative;*/
+        background: #02011B;
+        width: 100vw;
+        height:100vh;
+        bottom: 20px;
+        padding-top: 50px;
+    }
     .secPro{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        background:#02011B ;
-        width: 100vw;
-        position: relative;
+        /*background:#02011B ;*/
+        /*width: 100vw;*/
+        /*height: 100vh;*/
     }
     .secPro>div{
         padding: 20px;
@@ -270,26 +282,20 @@
         border-radius: 20px;
         border: 4px solid purple;
     }
-    #pro{
-        position: relative;
-        background: #02011B;
-        width: 100vw;
-        bottom: 20px;
-    }
+
     #Project {
-        position: absolute;
         color: white;
         margin-left: 700px;
         margin-top: 50px;
         top: 0px;
     }
 
-    .About{
+    #About{
         background: #02011B;
         width: 100vw;
-        height: fit-content;
-        position: relative;
-        margin-top: -50px;
+        height:100vh;
+        bottom: 20px;
+        padding-top: 70px;
     }
     .secAbout{
         display: grid;
@@ -300,6 +306,7 @@
     }
     #Abouts{
         color: #ffd700;
+        text-align: center;
     }
     .text{
         color: white;
@@ -343,11 +350,11 @@
         font-style: italic;
     }
     #skills{
-        position: relative;
         width: 100vw;
-        height:800px;
+        height: 100vh;
         background: #02011B;
-        margin-top: -50px;
+        margin-top: 50px;
+        padding-top: 200px;
     }
     #Skill{
         color: yellowgreen;
@@ -484,7 +491,7 @@
             </li>
 
             <li>
-                <a href="index.html#Abouts">About</a>
+                <a href="index.html#About">About</a>
             </li>
 
             <li>
@@ -545,147 +552,149 @@
     </main>
 <!--        **********  start assignment page  ***********-->
     <main id="assi">
-        <h1 id="Assignment">Assignment</h1>
-        <!--        ********** assignment 01   ***********-->
-        <section >
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 01</span>
-            </div>
+        <section class="secAssign">
+            <h1 id="Assignment">Assignment</h1>
+            <!--        ********** assignment 01   ***********-->
+            <section >
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 01</span>
+                </div>
 
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
 
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
 
-                    </ul>
-                </nav>
-            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!--        ********** assignment 02   ***********-->
+            <section >
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 02</span>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
+
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!--        ********** assignment 03   ***********-->
+            <section>
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 03</span>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
+
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!--        ********** assignment 04   ***********-->
+            <section>
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 04</span>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
+
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!--        ********** assignment 05   ***********-->
+            <section>
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 05</span>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
+
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!--        ********** assignment 06   ***********-->
+            <section>
+                <div>
+                    <img src="assets/assi.jfif" height="20px">
+                    <span>Assignment 06</span>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li >
+                                <a href=""><img src="assets/github.png" height="20px"></a>
+                            </li>
+
+                            <li>
+                                <a href=""><img src="assets/doc.jpg" height="20px"></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <img src="assets/lap_aasi.webp" >
+
         </section>
-
-        <!--        ********** assignment 02   ***********-->
-        <section >
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 02</span>
-            </div>
-
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
-
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <!--        ********** assignment 03   ***********-->
-        <section>
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 03</span>
-            </div>
-
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
-
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <!--        ********** assignment 04   ***********-->
-        <section>
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 04</span>
-            </div>
-
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
-
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <!--        ********** assignment 05   ***********-->
-        <section>
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 05</span>
-            </div>
-
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
-
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <!--        ********** assignment 06   ***********-->
-        <section>
-            <div>
-                <img src="assets/assi.jfif" height="20px">
-                <span>Assignment 06</span>
-            </div>
-
-            <div>
-                <nav>
-                    <ul>
-                        <li >
-                            <a href=""><img src="assets/github.png" height="20px"></a>
-                        </li>
-
-                        <li>
-                            <a href=""><img src="assets/doc.jpg" height="20px"></a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        
-        <img src="assets/lap_aasi.webp" >
-
     </main>
 
 
@@ -730,7 +739,7 @@
     </main>
 <!--        ********** About section  ***********-->
 
-    <main class="About">
+    <main id="About">
         <h1 id="Abouts">About me</h1>
         <!--        ********** About my school section  ***********-->
         <section class="secAbout">
