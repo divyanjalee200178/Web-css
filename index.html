@@ -48,7 +48,7 @@
         margin: 0px;
     }
     header>nav>ul>li{
-        padding: 0px 30px;
+        padding: 0px 40px;
         display: inline;
     }
     header>nav>ul>li>a{
@@ -59,11 +59,12 @@
     footer{
         background: #02011B;
         color: white;
-        position: relative;
+        /*position: relative;*/
         width: 100vw;
-        height: 800px;
-        margin: 0px ;
-        top: -100px;
+        height: 100vh;
+        /*margin: 10px ;*/
+        margin-top:  -20px;
+        padding-top: 10px;
     }
     #Contact{
         font-size: 50px;
@@ -71,10 +72,23 @@
         padding: 20px;
         text-align: center;
     }
+    #footer{
+        padding-top: 60px;
+    }
+    #footer>section>div>nav>ul{
+        list-style: none;
+    }
+
+    #footer>section>div>nav>ul>li{
+        padding: 100px 120px;
+        display: inline;
+    }
     #hero{
         margin-top: 50px;
-        position: relative;
-        padding: 20px;
+        padding-top: 60px;
+        /*position: relative;*/
+
+        /*padding: 30px;*/
         width: 100vw;
         /*height: 700px;*/
         height: 100vh;
@@ -111,8 +125,8 @@
         display: flex;
         color: #F8FD72;
         margin-top: 0px;
-        left: -650px;
-        top: 300px;
+        left: -640px;
+        top: 250px;
         position: absolute;
         font-style: italic;
 
@@ -122,7 +136,7 @@
         color: white;
         margin-left: 70px;
         right:  800px;
-        top: 320px;
+        top: 280px;
         position: absolute;
         width: 600px;
     }
@@ -156,7 +170,8 @@
     }
     #social>span{
         position: absolute;
-        top: 550px;
+        top: 650px;
+        margin: 0px 30px;
         left: 300px;
         padding: 0px 30px;
     }
@@ -176,7 +191,7 @@
     }
     #Assignment{
         position: absolute;
-        color: white;
+        color: gold;
         margin-top: 50px;
     }
     .secAssign>img{
@@ -188,7 +203,8 @@
         bottom: -600px;
     }
     .secAssign>section>div:first-child>span{
-        color: red;
+        color: #4B0082;
+        font-size: 20px;
     }
     .secAssign>section{
         display: flex;
@@ -236,22 +252,22 @@
 
     }
     .secAssign>section:first-child{
-        top: 100px;
+        margin-top:  150px;
     }
     .secAssign>section:nth-child(2){
-        top: 160px;
+        margin-top:  250px;
     }
     .secAssign>section:nth-child(3){
-        top: 220px;
+        margin-top: 350px;
     }
     .secAssign>section:nth-child(4){
-        top: 280px;
+        margin-top: 450px;
     }
     .secAssign>section:nth-child(5){
-        top: 340px;
+        margin-top: 550px;
     }
     .secAssign>section:nth-child(6){
-        top: 400px;
+        margin-top: 650px;
     }
 
     #pro{
@@ -275,12 +291,12 @@
     }
     .secPro>div>div{
         width: 300px;
-        background: #00ff00;
+        background:  #c4aead ;
 
         text-align: center;
         margin: 10px auto;
         border-radius: 20px;
-        border: 4px solid purple;
+        border: 4px solid #00b7eb ;
         padding: 50px;
     }
     .secPro>div>div:first-child{
@@ -300,7 +316,7 @@
     #About{
         background: #02011B;
         width: 100vw;
-        height:100vh;
+        height:120vh;
         bottom: 20px;
         padding-top: 40px;
     }
@@ -358,14 +374,16 @@
     }
     #skills{
         width: 100vw;
-        height: 100vh;
+        height: 140vh;
         background: #02011B;
-        margin-top: 50px;
-        padding-top: 200px;
+        margin-top: 0px;
+        padding-top: 100px;
+
     }
     #Skill{
         color: yellowgreen;
         text-align: center;
+
     }
     .secSkill>div{
         color: white;
@@ -376,60 +394,73 @@
         color: #E4D00A;
         font-size: 30px;
     }
+
     #secGallery{
-        position: relative;
         background: #02011B;
         width: 100vw;
-        height: 1200px;
-
+        height: 140vh;
+        margin-top: -100px;
+        padding-top: 150px;
+    }
+    #galle{
+        color: white;
+        text-align: center;
     }
     #secGallery>div:first-child{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         /*grid-template-rows: repeat(2, 1fr);*/
+
     }
     #secGallery>div:nth-child(2){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
     #secGallery>div:first-child>img{
-        width: 300px;
-        height:500px;
+        padding-top:0px;
+        width: 200px;
+        height:300px;
     }
     #secGallery>div:nth-child(2)>img{
-        margin: 50px 30px;
+        margin: 100px 30px;
         width: 300px;
         height:500px;
     }
     .secEvent{
-        position: relative;
+        /*position: relative;*/
         width: 100vw;
-        height:800px;
+        height:120vh;
         background: #02011B;
-        top: -20px;
+        margin-top: -200px;
+        padding-top: 80px;
+    }
+    #eve{
+        padding-top: 80px;
     }
     .secEvent {
-
         display: grid;
         grid-template-rows:    repeat(2, 1fr);
     }
     #Event{
-        position: absolute;
+        /*position: absolute;*/
         color: yellow;
-        top: -80px;
+        top: 40px;
         left: 50px;
         right: 0;
+        text-align: center;
     }
 
     #sec1>h3{
-        color: white;
-        position: absolute;
-        left: 500px;
+        color: red;
+        /*position: absolute;*/
+        margin-left: 550px;
         top: 0;
+        margin-top: 200px;
     }
     #sec1>img{
         width: 200px;
         height: 150px;
+        margin-top: 200px;
     }
     #sec1>img:first-child{
         position: absolute;
@@ -442,29 +473,51 @@
     #sect2>img{
         width: 200px;
         height: 150px;
-        position: absolute;
-        left: 1000px;
+        /*position: absolute;*/
+        margin-left: 800px;
+        /*margin-top: -350px;*/
+        /*margin: 0px 5px;*/
+        padding-top: -150px;
+    }
+    #sect2>img:first-child{
+        margin-left: 900px;
     }
     #sect2>img:nth-child(2){
-        width: 200px;
-        height: 150px;
-        position: absolute;
-        left: 1200px;
+        /*width: 200px;*/
+        /*height: 150px;*/
+        /*!*position: absolute;*!*/
+        margin-left: 1000px;
+        margin-top: 0px;
     }
     #sect2>h3{
-        color: white;
-        position: absolute;
-        left: 50px;
-        top: 400px;
-        display: inline;
+        color: red;
+        /*position: absolute;*/
+        margin-left: 50px;
+        margin-top: -200px;
+        /*display: inline;*/
     }
-   #pic3{
-        position: absolute;
-        left: 140px;
-        top: 150px;
+   /*#pic3{*/
+   /*     position: absolute;*/
+   /*     margin-left: 140px;*/
+   /*     margin-top:  -50px;*/
+   /* }*/
+
+    #Contact{
+        text-align: center;
     }
-
-
+    #footer>section:nth-child(2)>div:first-child{
+        margin-top: 100px;
+        margin-left: 100px;
+        color: gold;
+    }
+    #footer>section:nth-child(2)>div:nth-child(2){
+        margin-top: -20px;
+        margin-left: 800px;
+        color: gold;
+    }
+    #footer>section:nth-child(3)>div{
+       margin-top: 100px;
+    }
     @media all and (max-width: 768px) {
         .secPro>div>div{
             grid-template-columns: repeat(2, 1fr);
@@ -486,7 +539,7 @@
     <nav>
         <ul>
             <li>
-                <a href="index.html#Home">Home</a>
+                <a href="index.html#hero">Home</a>
             </li>
 
             <li >
@@ -502,7 +555,7 @@
             </li>
 
             <li>
-                <a href="index.html#Skill">Skill</a>
+                <a href="index.html#skills">Skill</a>
             </li>
 
             <li>
@@ -510,11 +563,11 @@
             </li>
 
             <li>
-                <a href="index.html#Event">Event</a>
+                <a href="index.html#eve">Event</a>
             </li>
 
             <li>
-                <a href="index.html#Contact">Contact</a>
+                <a href="index.html#footer">Contact</a>
             </li>
         </ul>
     </nav>
@@ -713,7 +766,7 @@
 
             <h2 id="Project">Project</h2>
         <section class="secPro">
-            <div>
+            <div data-aos="flip-up">
                 <div>
                     <img id="game" src="assets/game.jpeg">
                     <h1>Connect for game</h1>
@@ -724,7 +777,7 @@
             </div>
 
             <!--        ********** project 02 section  ***********-->
-            <div>
+            <div data-aos="flip-up">
                 <div>
                         <img id="manage" src="assets/management.jfif" height="140px" width="250px">
                         <h1>Connect for game</h1>
@@ -734,7 +787,7 @@
             </div>
 
             <!--        ********** project 03 section  ***********-->
-                <div>
+                <div data-aos="flip-up">
                     <div>
                         <img id="game2" src="assets/game.jpeg" height="210px">
                         <h1>Connect for game</h1>
@@ -820,6 +873,7 @@
 
 <!--        ********** Gallery section  ***********-->
     <main>
+        <h1 id="galle">Gallery</h1>
         <section id="secGallery">
             <div>
                 <img src="assets/Gallery/my.jpeg">
@@ -836,16 +890,17 @@
 
 <!--        ********** Event section  ***********-->
 
+<main id="eve">
 
-        <section class="secEvent">
         <h2 id="Event">Event</h2>
+    <section class="secEvent">
         <!--        ********** photos section  ***********-->
 
 
                 <div id="sec1">
                         <img src="assets/Gallery/group.jpeg" height="100px">
                         <img src="assets/Gallery/setificate.jpeg" height="80px"><br>
-                        <img id="pic3" src="assets/Gallery/innove.jpeg" height="80px">
+<!--                        <img id="pic3" src="assets/Gallery/innove.jpeg" height="80px">-->
                     <h3>During my first semester at the Institute of Software Engineering (IJSE), my team participated in an intensive group competition named "Innovesta." This project was a pivotal experience that allowed us to apply our learning in a real-world scenario, competing against other talented teams within the institute.</h3>
                 </div>
 
@@ -857,19 +912,12 @@
                     <h3>This is refreshing  party organized by our  institute for our batch at the Institute of Java <br>Software Engineering (IJSE).</h3>
 
                 </div>
-
-
-
-
-
-
-
         </section>
-
+</main>
 
 <!--        ********** footer section  ***********-->
     <footer>
-        <main>
+        <main id="footer">
             <!--        ********** social link navigation section  ***********-->
             <section>
                 <h1 id="Contact">Contact me</h1>
