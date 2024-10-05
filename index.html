@@ -16,7 +16,7 @@
         background: #E4D00A;
         top: 0;
         height: 80px;
-        z-index: 1;
+        z-index: 4;
     }
     #header_logo{
         display: flex;
@@ -194,16 +194,18 @@
         color: gold;
         margin-top: 50px;
     }
-    .secAssign>img{
+    .secAssign>div>img {
         width: 600px;
         height: 400px;
         border-radius: 100%;
         position: absolute;
-        left: 800px;
-        bottom: -600px;
+        left: 700px;
+        bottom: -650px;
+        z-index: 1;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05) inset;
     }
     .secAssign>section>div:first-child>span{
-        color: #4B0082;
+        color: white;
         font-size: 20px;
     }
     .secAssign>section{
@@ -212,12 +214,34 @@
         position: absolute;
         width: 400px;
         height: 40px;
-        background: white;
+        background: repeating-conic-gradient(from var(--a),#02011B 0%, #020728 25%, darkgoldenrod 50%, #040438 75%,blue 90%);
         left: 60px;
         text-align: center;
-        margin: 800px auto;
+        margin: 600px auto;
         border-radius: 20px 20px 20px 20px;
-        border: 2px solid purple;
+        border: 2px solid white;
+        overflow: hidden;
+        animation: animate 4s linear infinite;
+    }
+    @property --a {
+        syntax: "<angel>";
+        inherits: false;
+        initial-value: 0deg;
+
+    }
+    @keyframes animate {
+    0%{
+        --a: 0deg;
+    }
+        /*50%{*/
+        /*    --a: 90deg;*/
+        /*}*/
+        /*75%{*/
+        /*    --a: 120deg;*/
+        /*}*/
+        100%{
+           --a: 180deg;
+        }
     }
     .secAssign>section>div{
         position: absolute;
@@ -280,7 +304,8 @@
     }
     .secPro{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:  repeat(4, 1fr);
         /*background:#02011B ;*/
         /*width: 100vw;*/
         /*height: 100vh;*/
@@ -290,14 +315,32 @@
         margin: 200px auto;
     }
     .secPro>div>div{
-        width: 300px;
-        background:  #c4aead ;
+        width: 200px;
+        height: 250px;
+        background: #000036;
 
         text-align: center;
         margin: 10px auto;
         border-radius: 20px;
         border: 4px solid #00b7eb ;
         padding: 50px;
+    }
+    .secPro>div>div>h1{
+        color: #00ff00;
+    }
+    .secPro>div>div>button{
+        border: none;
+        outline: none;
+        /*margin-right: 100px;*/
+        padding: 0 25px;
+        border-radius:  15px 15px 15px 15px;
+        color: black;
+        cursor: pointer;
+        height: 30px;
+        box-shadow: rgba(212, 9, 218, 0.56) 0px 22px 70px 4px;;
+    }
+    .secPro>div>div>button:hover{
+        background: gold;
     }
     .secPro>div>div:first-child{
         padding: 10px;
@@ -308,9 +351,25 @@
     /*}*/
     #Project {
         color: white;
-        margin-left: 500px;
+        /*margin-left: 500px;*/
         margin-top: 50px;
         top: 0px;
+        text-align: center;
+    }
+
+    #div5{
+        margin-top: -30px;
+    }
+
+    #div6{
+        margin-top: -30px;
+    }
+
+    #div7{
+        margin-top: -30px;
+    }
+    #div8{
+        margin-top: -30px;
     }
 
     #About{
@@ -455,12 +514,12 @@
         /*position: absolute;*/
         margin-left: 550px;
         top: 0;
-        margin-top: 200px;
+        margin-top: 150px;
     }
     #sec1>img{
         width: 200px;
         height: 150px;
-        margin-top: 200px;
+        margin-top: 150px;
     }
     #sec1>img:first-child{
         position: absolute;
@@ -481,13 +540,14 @@
     }
     #sect2>img:first-child{
         margin-left: 900px;
+        margin-top: -50px;
     }
     #sect2>img:nth-child(2){
         /*width: 200px;*/
         /*height: 150px;*/
         /*!*position: absolute;*!*/
         margin-left: 1000px;
-        margin-top: 0px;
+        margin-top: 10px;
     }
     #sect2>h3{
         color: red;
@@ -752,8 +812,10 @@
                     </nav>
                 </div>
             </section>
+            <div id="image">
+                <img src="assets/lap_aasi.webp" >
+            </div>
 
-            <img src="assets/lap_aasi.webp" >
 
         </section>
     </main>
@@ -768,9 +830,9 @@
         <section class="secPro">
             <div data-aos="flip-up">
                 <div>
-                    <img id="game" src="assets/game.jpeg">
+                    <img id="game" src="assets/game.jpeg" height="100px" width="150px">
                     <h1>Connect for game</h1>
-                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
+<!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
                     <button>view</button>
                     <br><br>
                 </div>
@@ -779,9 +841,9 @@
             <!--        ********** project 02 section  ***********-->
             <div data-aos="flip-up">
                 <div>
-                        <img id="manage" src="assets/management.jfif" height="140px" width="250px">
+                        <img id="manage" src="assets/management.jfif" height="100px" width="150px">
                         <h1>Connect for game</h1>
-                        <h3>This project represents a comprehensive approach to addressing organizational needs through intuitive user interfaces, efficient data management, and seamless integration of key functionalities.</h3>
+<!--                        <h3>This project represents a comprehensive approach to addressing organizational needs through intuitive user interfaces, efficient data management, and seamless integration of key functionalities.</h3>-->
                         <button>view</button>
                 </div>
             </div>
@@ -789,12 +851,58 @@
             <!--        ********** project 03 section  ***********-->
                 <div data-aos="flip-up">
                     <div>
-                        <img id="game2" src="assets/game.jpeg" height="210px">
+                        <img id="game2" src="assets/game.jpeg" height="100px" width="150px">
                         <h1>Connect for game</h1>
-                        <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>
+<!--                        <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
                         <button>view</button>
                     </div>
                 </div>
+
+            <div data-aos="flip-up">
+                <div>
+                    <img id="game3" src="assets/game.jpeg" height="100px" width="150px">
+                    <h1>Connect for game</h1>
+<!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
+                    <button>view</button>
+                </div>
+            </div>
+
+
+            <div data-aos="flip-up" id="div5">
+                <div>
+                    <img id="game5" src="assets/game.jpeg" height="100px" width="150px">
+                    <h1>Connect for game</h1>
+                    <!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
+                    <button>view</button>
+                </div>
+            </div>
+
+            <div data-aos="flip-up" id="div6">
+                <div>
+                    <img id="game6" src="assets/game.jpeg" height="100px" width="150px">
+                    <h1>Connect for game</h1>
+                    <!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
+                    <button>view</button>
+                </div>
+            </div>
+
+            <div data-aos="flip-up" id="div7">
+                <div>
+                    <img id="game7" src="assets/game.jpeg" height="100px" width="150px">
+                    <h1>Connect for game</h1>
+                    <!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
+                    <button>view</button>
+                </div>
+            </div>
+
+            <div data-aos="flip-up" id="div8">
+                <div>
+                    <img id="game8" src="assets/game.jpeg" height="100px" width="150px">
+                    <h1>Connect for game</h1>
+                    <!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
+                    <button>view</button>
+                </div>
+            </div>
             </section>
 
 
