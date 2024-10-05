@@ -61,7 +61,7 @@
         color: white;
         /*position: relative;*/
         width: 100vw;
-        height: 100vh;
+        height: 120vh;
         /*margin: 10px ;*/
         margin-top:  -20px;
         padding-top: 10px;
@@ -202,7 +202,7 @@
         left: 700px;
         bottom: -650px;
         z-index: 1;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05) inset;
+        box-shadow: rgba(104, 168, 239, 0.4) 2px 6px 4px 2px, rgba(78, 243, 23, 0.56) 8px 4px 6px 2px, rgba(238, 119, 119, 0.08) 4px 1px 2px inset;
     }
     .secAssign>section>div:first-child>span{
         color: white;
@@ -394,6 +394,7 @@
     .text{
         color: white;
         font-size: 20px;
+        animation: animate 2s linear infinite;
     }
     #text1{
         color: #00ffff;
@@ -575,9 +576,72 @@
         margin-left: 800px;
         color: gold;
     }
-    #footer>section:nth-child(3)>div{
-       margin-top: 100px;
+    #footer>section:nth-child(3){
+        padding-top: 20px;
+        background: gold;
+        width: 400px;
+        height: 300px;
     }
+    #section3{
+        margin-top: 20px;
+        background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);
+        width: 500px;
+        height: 400px;
+        margin-left: 550px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        animation: animates 2s linear infinite;
+    }
+    #section3>div{
+        width: 480px;
+        height: 380px;
+        background: white;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    @property --a {
+        syntax: "<angel>";
+        inherits: false;
+        initial-value: 0deg;
+
+    }
+    @keyframes animates {
+        0%{
+            --a: 0deg;
+            background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);
+        }
+        50%{
+            --a: 90deg;
+            background: repeating-conic-gradient(from var(--a), #f5c347 0%, #8223da 25%, #e85c4f 50%, rgb(194, 46, 236) 75%,blue 90%);
+        }
+        75%{
+            --a: 120deg;
+            background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);
+        }
+        100%{
+            --a: 180deg;
+            background: repeating-conic-gradient(from var(--a), #f5c347 0%, #8223da 25%, #e85c4f 50%, rgb(194, 46, 236) 75%,blue 90%);
+        }
+
+    }
+    .form{
+       margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .form>span>label{
+        color: black;
+        justify-self: center;
+    }
+
     @media all and (max-width: 768px) {
         .secPro>div>div{
             grid-template-columns: repeat(2, 1fr);
@@ -655,7 +719,10 @@
 
 
         <br>
-        <img id="my" src="assets/My_photo.jpeg" height="400px" class="animate__animated animate__bounce">
+
+            <img id="my" src="assets/My_photo.jpeg" height="400px" class="animate__animated animate__bounce">
+
+
 
         <!--        *********  social icon section  ********-->
         <section >
@@ -1071,30 +1138,33 @@
             </section>
                     <br>
             <!--        ********** send email section  ***********-->
-            <section>
+            <section id="section3">
                 <div>
+                    <div id="form1" class="form">
                     <span>
                         <label for="email">From   :</label>
                         <input type="email" id="email" placeholder="Enter your Email"><br><br>
                     </span>
 
-                </div>
+                    </div>
 
-                <div>
+                    <div class="form">
                     <span>
                         <label for="emails">To  :</label>
                         <input type="emails" id="emails" placeholder="Enter Email"><br><br>
                     </span>
-                </div>
+                    </div>
 
-                <div>
+                    <div class="form">
                     <span>
                         <label for="massage">Massage  :</label>
                         <input type="massage" id="massage" placeholder="Enter your massage">
                     </span>
-                    <br><br>
-                    <button>Send</button>
+                        <br><br>
+                        <button>Send</button>
+                    </div>
                 </div>
+
             </section>
         </main>
     </footer>
