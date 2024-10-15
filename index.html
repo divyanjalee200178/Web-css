@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <img src="image-small.jpg" srcset="image-small.jpg 500w, image-medium.jpg 1000w, image-large.jpg 2000w" alt="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
@@ -45,7 +47,7 @@
     }
     header>nav>ul{
         list-style: none;
-        margin: 0px;
+        margin: 10px;
     }
     header>nav>ul>li{
         padding: 0px 40px;
@@ -124,9 +126,8 @@
     #About-me{
         display: flex;
         color: #F8FD72;
-        margin-top: 0px;
-        left: -640px;
-        top: 250px;
+        top: 340px;
+        left: 100px;
         position: absolute;
         font-style: italic;
 
@@ -135,17 +136,17 @@
         display: flex;
         color: white;
         margin-left: 70px;
-        right:  800px;
-        top: 280px;
+        right:  650px;
+        top: 380px;
         position: absolute;
         width: 600px;
     }
     #abo>button{
-        margin: 420px -350px;
+        margin: 420px -500px;
         background: yellow;
         border: none;
         outline: none;
-        margin-right: 100px;
+        margin-right: 50px;
         padding: 0 25px;
         border-radius:  25px 25px 25px 25px;
         color: black;
@@ -156,6 +157,8 @@
     #abo>button:hover{
         background: red;
     }
+
+
     #my{
         margin-left: 200px;
         width: 300px;
@@ -167,6 +170,9 @@
         left: 700px;
         /*justify-self: end;*/
         box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #tex{
+        color: black;
     }
     #social>span{
         position: absolute;
@@ -596,7 +602,7 @@
     #section3>div{
         width: 480px;
         height: 380px;
-        background: white;
+        background: midnightblue;
         position: absolute;
         margin: auto;
         top: 0;
@@ -616,16 +622,16 @@
     @keyframes animates {
         0%{
             --a: 0deg;
-            background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);
+            background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(42, 83, 246) 75%,blue 90%);
         }
-        50%{
-            --a: 90deg;
-            background: repeating-conic-gradient(from var(--a), #f5c347 0%, #8223da 25%, #e85c4f 50%, rgb(194, 46, 236) 75%,blue 90%);
-        }
-        75%{
-            --a: 120deg;
-            background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);
-        }
+        /*50%{*/
+        /*    --a: 90deg;*/
+        /*    background: repeating-conic-gradient(from var(--a), #f5c347 0%, #8223da 25%, #e85c4f 50%, rgb(194, 46, 236) 75%,blue 90%);*/
+        /*}*/
+        /*75%{*/
+        /*    --a: 120deg;*/
+        /*    background: repeating-conic-gradient(from var(--a), #bb19e1 0%, #85e546 25%, #24dede 50%, rgb(246, 42, 79) 75%,blue 90%);*/
+        /*}*/
         100%{
             --a: 180deg;
             background: repeating-conic-gradient(from var(--a), #f5c347 0%, #8223da 25%, #e85c4f 50%, rgb(194, 46, 236) 75%,blue 90%);
@@ -639,12 +645,465 @@
     }
     .form>span>label{
         color: black;
-        justify-self: center;
+        margin-left: 50px;
+        margin-bottom:  400px;
+        padding-top: 200px;
     }
 
     @media all and (max-width: 768px) {
+        .secPro>div{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            width: 100px;
+            font-size: 10px;
+            padding-left: 5px;
+        }
         .secPro>div>div{
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            border: 1px solid red;
+            width: 80px;
+            height: 180px;
+        }
+        .secPro>div>div>img{
+            width: 60px;
+        }
+        .secPro>div>div>button{
+            width: 60px;
+            height: 20px;
+            font-size: 10px;
+        }
+        .hero>section:nth-child(2)>div>h2{
+            font-size: 10px;
+        }
+        #tex{
+            font-size: 15px;
+            position: absolute;
+            left: -50px;
+            /*right:  800px;*/
+            padding-left: 8px;
+            top: -180px;
+            color: black;
+            font-style: italic;
+        }
+        #abo>button{
+            margin: 400px -200px;
+            background: yellow;
+            border: none;
+            outline: none;
+            margin-right: 50px;
+            padding: 0 25px;
+            border-radius:  25px 25px 25px 25px;
+            color: black;
+            cursor: pointer;
+            height: 30px;
+            box-shadow: rgba(212, 9, 218, 0.56) 0px 22px 70px 4px;;
+        }
+        #my{
+            margin-left: -280px;
+            width: 200px;
+            height: 300px;
+        }
+        #About-me {
+            /*display: flex;*/
+            color: #F8FD72;
+            margin-top: 20px;
+            left: 40px;
+            /*top: 200px;*/
+            font-size: 15px;
+        }
+        #name{
+            margin-top: 120px;
+            color: white;
+            position: absolute;
+            left: 100px;
+            font-style: italic;
+            font-size: 10px;
+        }
+        #name-icon{
+            width: 40px;
+            height: 40px;
+            margin-top: 100px;
+            display: flex;
+            left: 50px;
+            position: absolute;
+            border: 2px solid red;
+        }
+        header{
+            position: fixed;
+            width: 100vw;
+            background: #E4D00A;
+            top: 0;
+            height: 60px;
+            z-index: 4;
+        }
+        #header_logo{
+            display: flex;
+            width: 20px;
+            height: 20px;
+            top: 14px;
+            position: absolute;
+            left: 10px;
+            border: 2px solid red;
+        }
+        #header_text{
+            margin-left: 40px;
+            margin-top: 20px;
+            color: midnightblue;
+            position: absolute;
+            font-size: 14px;
+            font-style: italic;
+        }
+        header>nav>ul>li>a{
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        header>nav>ul>li{
+            padding: 0px 10px;
+            display: inline;
+        }
+        #Assignment{
+            position: absolute;
+            color: gold;
+            margin-top: 60px;
+            margin: 10px;
+        }
+        .secAssign>div>img {
+            width: 300px;
+            height: 200px;
+            border-radius: 100%;
+            position: absolute;
+            left: 500px;
+            bottom: -600px;
+            z-index: 1;
+        }
+        .secAssign>section>div:first-child>span{
+            color: white;
+            font-size: 15px;
+        }
+        .secAssign>section{
+            display: flex;
+            grid-template-rows: repeat(6,1fr);
+            position: absolute;
+            width: 300px;
+            height: 40px;
+            left: 60px;
+            text-align: center;
+            margin: 600px auto;
+            border-radius: 20px 20px 20px 20px;
+        }
+        .secAssign>section>div{
+            position: absolute;
+            left: 20px;
+        }
+        #image>img{
+
+            width: 300px;
+            height: 200px;
+            margin-left: -80px;
+            margin-top: 1000px;
+        }
+        .secAssign>section>div>img{
+            width: 10px;
+            height: 10px;
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul{
+            list-style: none;
+            /*margin: 30px;*/
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li:first-child{
+            padding: -10px 10px;
+            display: inline;
+            top:  -10px;
+            left: 150px;
+            position: absolute;
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li:nth-child(2){
+            padding: 0px 20px;
+            display: inline;
+            top:  10px;
+            left: 200px;
+            position: absolute;
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li>a{
+            text-decoration: none;
+
+        }
+        .secAssign>section:first-child{
+            margin-top:  80px;
+        }
+        .secAssign>section:nth-child(2){
+            margin-top:  160px;
+        }
+        .secAssign>section:nth-child(3){
+            margin-top: 240px;
+        }
+        .secAssign>section:nth-child(4){
+            margin-top: 320px;
+        }
+        .secAssign>section:nth-child(5){
+            margin-top: 400px;
+        }
+        .secAssign>section:nth-child(6){
+            margin-top: 480px;
+        }
+
+        .text{
+            font-size: 10px;
+        }
+        #im{
+            width: 200px;
+            height: 100px;
+            margin-left: 480px;
+            margin-top: -400px;
+        }
+        #text2{
+            font-size: 10px;
+        }
+        .secAbout>div:nth-child(2)>h4{
+            font-size: 13px;
+        }
+        .secAbout>div:nth-child(2)>img{
+            width: 200px;
+            height: 100px;
+            margin-left: 498px;
+            margin-top: -400px;
+        }
+        #social>span>img{
+            margin-left: -100px;
+            /*margin: 10px 10px;*/
+        }
+    }
+    @media all and (max-width: 425px) {
+        .secPro>div{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            width: 100px;
+            font-size: 10px;
+            padding-left: 5px;
+        }
+        .secPro>div>div{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            border: 1px solid red;
+            width: 80px;
+            height: 180px;
+        }
+        .secPro>div>div>img{
+            width: 60px;
+        }
+        .secPro>div>div>button{
+            width: 60px;
+            height: 20px;
+            font-size: 10px;
+        }
+        .hero>section:nth-child(2)>div>h2{
+            font-size: 10px;
+        }
+        #tex{
+            font-size: 15px;
+            position: absolute;
+            left: -50px;
+            /*right:  800px;*/
+            padding-left: 8px;
+            top: -180px;
+            color: black;
+            font-style: italic;
+        }
+        #abo>button{
+            margin: 400px -200px;
+            background: yellow;
+            border: none;
+            outline: none;
+            margin-right: 50px;
+            padding: 0 25px;
+            border-radius:  25px 25px 25px 25px;
+            color: black;
+            cursor: pointer;
+            height: 30px;
+            box-shadow: rgba(212, 9, 218, 0.56) 0px 22px 70px 4px;;
+        }
+        #my{
+            margin-left: -180px;
+            width: 150px;
+            height: 200px;
+        }
+        #About-me {
+            /*display: flex;*/
+            color: #F8FD72;
+            margin-top: 20px;
+            left: 20px;
+            /*top: 200px;*/
+            font-size: 15px;
+        }
+        #name{
+            margin-top: 120px;
+            color: white;
+            position: absolute;
+            left: 100px;
+            font-style: italic;
+            font-size: 10px;
+        }
+        #name-icon{
+            width: 40px;
+            height: 40px;
+            margin-top: 100px;
+            display: flex;
+            left: 50px;
+            position: absolute;
+            border: 2px solid red;
+        }
+        header{
+            position: fixed;
+            width: 100vw;
+            background: #E4D00A;
+            top: 0;
+            height: 60px;
+            z-index: 4;
+        }
+        #header_logo{
+            display: flex;
+            width: 15px;
+            height: 15px;
+            top: 14px;
+            position: absolute;
+            left: 10px;
+            border: 1px solid red;
+        }
+        #header_text{
+            margin-left: 20px;
+            margin-top: 20px;
+            color: midnightblue;
+            position: absolute;
+            font-size: 10px;
+            font-style: italic;
+        }
+        header>nav>ul>li>a{
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+        }
+        header>nav>ul>li{
+            padding: 0px 5px;
+            display: inline;
+        }
+        #Assignment{
+            position: absolute;
+            color: gold;
+            margin-top: 60px;
+            margin: 10px;
+        }
+        .secAssign>div>img {
+            width: 200px;
+            height: 100px;
+            border-radius: 100%;
+            position: absolute;
+            left: 300px;
+            bottom: -600px;
+            z-index: 1;
+        }
+        .secAssign>section>div:first-child>span{
+            color: white;
+            font-size: 12px;
+        }
+        .secAssign>section{
+            display: flex;
+            grid-template-rows: repeat(6,1fr);
+            position: absolute;
+            width: 200px;
+            height: 25px;
+            left: 40px;
+            text-align: center;
+            margin: 600px auto;
+            border-radius: 20px 20px 20px 20px;
+        }
+        .secAssign>section>div:first-child>span{
+            color: white;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+        .secAssign>section>div{
+            position: absolute;
+            left: 20px;
+
+        }
+        #image>img{
+
+            width: 200px;
+            height: 100px;
+            margin-left: -40px;
+            margin-top: 1000px;
+        }
+
+        .secAssign>section>div:nth-child(2)>nav>ul{
+            list-style: none;
+            /*margin: 30px;*/
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li:first-child{
+            padding: -10px 10px;
+            display: inline;
+            top:  -2px;
+            left: 150px;
+            position: absolute;
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li:nth-child(2){
+            padding: 0px 20px;
+            display: inline;
+            top:  10px;
+            left: 100px;
+            position: absolute;
+        }
+        .secAssign>section>div:nth-child(2)>nav>ul>li>a{
+            text-decoration: none;
+            width: 5px;
+            height: 5px;
+            margin-left: -5px;
+            margin-top: 30px;
+        }
+        .secAssign>section:first-child{
+            margin-top:  80px;
+        }
+        .secAssign>section:nth-child(2){
+            margin-top:  160px;
+        }
+        .secAssign>section:nth-child(3){
+            margin-top: 240px;
+        }
+        .secAssign>section:nth-child(4){
+            margin-top: 320px;
+        }
+        .secAssign>section:nth-child(5){
+            margin-top: 400px;
+        }
+        .secAssign>section:nth-child(6){
+            margin-top: 480px;
+        }
+
+        .text{
+            font-size: 10px;
+        }
+        #im{
+            width: 200px;
+            height: 100px;
+            margin-left: 480px;
+            margin-top: -400px;
+        }
+        #text2{
+            font-size: 10px;
+        }
+        .secAbout>div:nth-child(2)>h4{
+            font-size: 10px;
+        }
+        .secAbout>div:nth-child(2)>img{
+            width: 150px;
+            height: 80px;
+            margin-left: 498px;
+            margin-top: -400px;
+        }
+        #social>span>img{
+            margin-left: -100px;
+            /*margin: 10px 10px;*/
         }
     }
 
@@ -708,11 +1167,12 @@
 
         <!--        *********  About section  ********-->
         <section>
-            <div id="abo" data-aos="fade-down"
-                 data-aos-easing="linear"
-                 data-aos-duration="1500">>
+            <div id="abo">
                 <h2 id="About-me">About me</h2>
-                <h3>Hello, I’m Indumini Divyanjalee Silva. As an undergraduate software engineer,I embark on a journey fueled by curiosity and passion for crafting innovative solutions.</h3>
+                <h3 id="tex">Hello, I’m Indumini Divyanjalee Silva. <br>
+                    As an undergraduate software engineer,<br>
+                    I embark on a journey fueled by curiosity and passion for<br>
+                    crafting innovative solutions.</h3>
                 <button>Download CV</button>
             </div>
         </section>
@@ -986,7 +1446,7 @@
                 <h4 class="text">Situated in Kalutara discrict, Sri Lanka, Gnanodaya Maha Vidyalaya <br>provided me with a robust foundation that has shaped my academic and personal growth.</h4>
                 <h4 class="text">At Gnanodaya Maha Vidyalaya, I successfully completed my Ordinary Level (O/L)<br> examinations and Advanced Level (A/L) examinations.</h4>
                 <h4 class="text"> I successfully completed my IT Diploma.</h4>
-                <img src="assets/school.jpg" height="100px">
+                <img src="assets/school.jpg" id="im" height="100px">
             </div>
 
 
