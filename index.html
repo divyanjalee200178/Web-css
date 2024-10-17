@@ -13,6 +13,11 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <style>
 
@@ -48,14 +53,25 @@
         transition: all 0.5s ease;
     }
 
-    .navbar a {
+    .navbar>a {
         font-size: 20px;
         color: black;
         margin-left: 4rem;
         font-weight: 700;
         transition: 0.3s ease;
     }
+    .animate__animated.animate__backInLeft{
+        --animate-duration: 2s;
+    }
+    .animate__animated.animate__animated::after{
+        --animate-duration: 4s;
+    }
 
+    .navbar>a:hover{
+        width: 50%;
+        transform: translateY(-50%);
+        color: red;
+    }
     #menu-icon {
         font-size: 20px;
         color:white;
@@ -119,7 +135,30 @@
 
     #tex {
         font-size: 20px;
+
     }
+    /*#tex::before{*/
+    /*    content: "";*/
+    /*    color: red;*/
+    /*    animation: words 20s infinite;*/
+    /*}*/
+
+    @keyframes animate {
+        0%,18%,20%,50.1%,60%,65.1%,80%,90.1%{
+            color: red;
+            text-shadow: none;
+        }
+    18%,20%,50.1%,60%,65.1%,80%,90.1%,100%{
+            color: yellow;
+            text-shadow: 0 0 10px lavender,
+            0 0 10px grey,
+            0 0 10px green,
+            0 0 10px orange,
+            0 0 10px red;
+        }
+    }
+
+
 
     button {
         background-color: yellowgreen;
@@ -185,9 +224,9 @@
         gap: 20px;
     }
 
-    /* Assignment Card */
+
     .secAssign > section {
-        background: repeating-conic-gradient(from var(--a),#02011B 0%, #020728 25%, #041559 50%, #040438 75%,blue 90%);
+        background: repeating-conic-gradient(from var(--a),#02011B 0%, #020728 25%, #482d4b 50%, #040438 75%,blue 90%);
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 15px;
@@ -206,9 +245,9 @@
         0%{
             --a: 0deg;
         }
-        /*50%{*/
-        /*    --a: 90deg;*/
-        /*}*/
+        50%{
+            --a: 90deg;
+        }
         75%{
             --a: 120deg;
         }
@@ -292,10 +331,12 @@
 
     .secPro>div {
         background-color: #02011B;
-        border-radius: 8px;
+        margin-top: 50px;
+        border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         transition: transform 0.2s;
+        border: 20px solid  rgb(105,105,105);
     }
 
     .secPro>div:hover {
@@ -338,22 +379,26 @@
         width: 50px;
         height: 50px;
     }
+    /* About Section */
     #About{
         margin-top: 150px;
     }
     #Abouts{
+        padding-top: 100px;
         margin-top: 200px;
         text-align: center;
     }
     .secAbout{
         margin-top: 50px;
     }
-    /* About Section */
+
     .secAbout div {
         padding: 20px;
         background-color: #1e1e1e;
         border-radius: 8px;
         margin-bottom: 20px;
+        text-align: center;
+        font-size: 20px;
     }
 
     .secAbout div img {
@@ -365,53 +410,124 @@
 
     /* Skills Section */
 
-    #skills{
+    /*#skills{*/
+    /*    margin-top: 200px;*/
+    /*}*/
+    /*#Skill{*/
+    /*    text-align: center;*/
+    /*}*/
+    /*.secSkill div {*/
+    /*    padding: 20px;*/
+    /*    background-color: #1e1e1e;*/
+    /*    border-radius: 8px;*/
+    /*    margin-bottom: 20px;*/
+    /*}*/
+    #skills {
         margin-top: 200px;
+        padding: 100px 20px;
+        background-color: #02011B; /* Soft light background */
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        /*padding-top: 100px;*/
     }
-    #Skill{
+
+    #Skill {
         text-align: center;
+        color:white;
+        font-size: 30px;
+        margin-bottom: 40px;
+
     }
+
+    .secSkill {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+
     .secSkill div {
         padding: 20px;
-        background-color: #1e1e1e;
-        border-radius: 8px;
-        margin-bottom: 20px;
+        border: 2px solid yellow;
+        border-radius: 12px;
+        background-color: #ffffff;
+        transition: box-shadow 0.3s;
+    }
+
+    .secSkill div:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px);
+    }
+
+    .type {
+        color: red; /* Title color */
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        color: #555;
+        font-size: 20px;
     }
 
     /* Gallery Section */
 
-    #secGallery{
-        padding-top: 150px;
-    }
-    #secGallery div {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
+    #secGallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         padding: 20px;
     }
 
-    #secGallery img {
-        width: 200px;
-        height: 150px;
-        border-radius: 8px;
-        transition: transform 0.3s ease-in-out;
+
+    #secGallery>div {
+        border-radius: 15px;
+        transition: transform 0.3s;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-left: 250px;
     }
 
-    #secGallery img:hover {
-        transform: scale(1.05);
+    #secGallery>div>img {
+        width: 50%;
+        height: auto;
+        border: 4px solid darkred;
+        display: block;
+        border-radius: 20px;
+
+
+    }
+
+    #secGallery div:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    #galle {
+        text-align: center;
+        font-size: 30px;
+        margin: 30px 0;
+        color: white;
+        padding-top: 100px;
     }
 
     /* Events Section */
 
     #eve{
-        padding-top: 150px;
+        padding-top: 100px;
         text-align: center;
+        font-size: 30px;
     }
-    .secEvent div {
+    .secEvent>div {
         padding: 20px;
-        background-color: #1e1e1e;
+        background-color: rgb(83,104,120);
         border-radius: 8px;
         margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .secEvent>div>img{
+        width: 250px;
+        height: auto;
+        border-radius: 20px;
     }
 
     /* Footer */
@@ -419,17 +535,23 @@
     #footer {
         background-color: #1e1e1e;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 150px;
     }
 
     #footer>nav>ul {
         display: flex;
         justify-content: center;
+        margin-left: 200px;
         gap: 20px;
+    }
+
+    #footer>nav>ul>li{
+        margin-left: 200px;
     }
 
     #footer>nav>ul>li>img:hover {
         transform: scale(1.2);
+
     }
 
     #footer>section {
@@ -458,11 +580,11 @@
             position: absolute;
             top: 100%;
             right: -100%;
-            width: 255px;
-            min-height: 100vh;
+            width: 160px;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
-            background: red;
+            background: white;
             transition:all 0.5s ease ;
             backdrop-filter: blur(10px);
         }
@@ -470,7 +592,7 @@
         .navbar a{
             display: block;
             padding: 17px;
-            font-size: 22px;
+            font-size: 15px;
         }
 
         .navbar.active{
@@ -530,8 +652,31 @@
             color: white;
         }
 
+        /*#secGallery>div {*/
+        /*    flex-direction: column;*/
+        /*}*/
+        #secGallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+
         #secGallery>div {
-            flex-direction: column;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+        }
+        #secGallery>div>img {
+            width: 200px;
+            height: auto;
+            border: 2px solid darkred;
+            display: block;
+            border-radius: 20px;
+
+
         }
 
         #footer nav ul {
@@ -569,7 +714,7 @@
             margin: 20px auto;
             box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
-        .secPro div {
+        .secPro>div {
             width: 100%;
         }
 
@@ -577,7 +722,7 @@
             font-size: 20px;
         }
         nav>ul {
-            margin-left: 180px;
+            margin-left: 185px;
             gap: 2px;
         }
         nav>li {
@@ -598,6 +743,29 @@
         }
         #menu-icon{
             display: block;
+        }
+        #secGallery {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+
+        #secGallery>div {
+            border-radius: 15px;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: -20px;
+        }
+        #secGallery>div>img {
+            width: 300px;
+            height: auto;
+            border: 4px solid darkred;
+            display: block;
+            border-radius: 20px;
+
+
         }
     }
 
@@ -654,7 +822,7 @@
         <a href="index.html#pro" class="">Projects</a>
         <a href="index.html#Abouts" class="">About</a>
         <a href="index.html#skills" class="">Skill</a>
-        <a href="index.html#secGallery" class="">Gallery</a>
+        <a href="index.html#galle" class="">Gallery</a>
         <a href="index.html#eve" class="">Event</a>
         <a href="index.html#footer" class="">Contact</a>
     </nav>
@@ -672,8 +840,8 @@
     <!--        ***  About section  ****-->
     <section>
         <div id="abo">
-            <h2 id="About-me">About me</h2>
-            <h3 id="tex">Hello, I’m Indumini Divyanjalee Silva. <br>
+            <h2 id="About-me" class="animate__animated animate__backInLeft">About me</h2>
+            <h3 id="tex" class="animate__animated animate__lightSpeedInLeft">Hello, I’m Indumini Divyanjalee Silva. <br>
                 As an undergraduate software engineer,<br>
                 I embark on a journey fueled by curiosity and passion for<br>
                 crafting innovative solutions.</h3>
@@ -707,7 +875,7 @@
     <h1 id="Assignment">Assignment</h1>
     <section class="secAssign">
         <!--        **** assignment 01   *****-->
-        <section >
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 01</span>
@@ -730,7 +898,7 @@
         </section>
 
         <!--        **** assignment 02   *****-->
-        <section >
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 02</span>
@@ -753,7 +921,7 @@
         </section>
 
         <!--        **** assignment 03   *****-->
-        <section>
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 03</span>
@@ -776,7 +944,7 @@
         </section>
 
         <!--        **** assignment 04   *****-->
-        <section>
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 04</span>
@@ -799,7 +967,7 @@
         </section>
 
         <!--        **** assignment 05   *****-->
-        <section>
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 05</span>
@@ -822,7 +990,7 @@
         </section>
 
         <!--        **** assignment 06   *****-->
-        <section>
+        <section data-aos="zoom-in-right">
             <div>
                 <img src="assets/assi.jfif" height="20px">
                 <span>Assignment 06</span>
@@ -860,7 +1028,7 @@
     <h2 id="Project">Project</h2>
     <section class="secPro">
         <div >
-            <div>
+            <div data-aos="flip-up">
                 <img id="game" src="assets/game.jpeg" height="100px" width="150px">
                 <h1>Connect for game</h1>
                 <!--                    <h3>A captivating puzzle game experience designed to challenge players' minds and entertain through interactive puzzles and engaging game play.</h3>-->
@@ -1014,16 +1182,23 @@
 <main>
     <h1 id="galle">Gallery</h1>
     <section id="secGallery">
-        <div>
-            <img src="assets/Gallery/my.jpeg">
-            <img src="assets/Gallery/group.jpeg">
+        <div data-aos="flip-left"
+             data-aos-easing="ease-out-cubic"
+             data-aos-duration="2000">
+            <img src="assets/Gallery/setificate.jpeg">
+            <img src="assets/Gallery/oran.jpeg">
             <img src="assets/Gallery/my2.jpeg">
         </div>
-        <div>
-            <img src="assets/Gallery/oran.jpeg">
-            <img src="assets/Gallery/setificate.jpeg">
+
+        <div data-aos="flip-left"
+             data-aos-easing="ease-out-cubic"
+             data-aos-duration="2000">
+            <img src="assets/Gallery/group.jpeg">
+            <img src="assets/Gallery/my.jpeg">
             <img src="assets/Gallery/innove.jpeg">
         </div>
+
+
     </section>
 </main>
 
@@ -1032,11 +1207,11 @@
 <main id="eve">
 
     <h2 id="Event">Event</h2>
-    <section class="secEvent">
+    <section class="secEvent" >
         <!--        **** photos section  *****-->
 
 
-        <div id="sec1">
+        <div id="sec1" data-aos="zoom-in">
             <img src="assets/Gallery/group.jpeg" height="100px">
             <img src="assets/Gallery/setificate.jpeg" height="80px"><br>
 
@@ -1064,7 +1239,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href=""><img src="assets/Contact/link.webp" height="40px"></a>
+                            <a href="https://www.linkedin.com/feed/"><img src="assets/Contact/link.webp" height="40px"></a>
                         </li>
 
                         <li>
@@ -1072,7 +1247,7 @@
                         </li>
 
                         <li>
-                            <a href=""><img src="assets/Contact/git.jfif" height="40px"></a>
+                            <a href="https://github.com/divyanjalee200178/"><img src="assets/Contact/git.jfif" height="40px"></a>
                         </li>
 
                         <li>
@@ -1136,6 +1311,18 @@
 <!--AOS-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    let menu = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    }
+
+    window.onscroll = () => {
+        menu.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
     AOS.init();
 </script>
 </body>
