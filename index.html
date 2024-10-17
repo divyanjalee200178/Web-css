@@ -16,12 +16,13 @@
 </head>
 <style>
 
-    /* Global styles */
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
+
     }
 
     body {
@@ -38,6 +39,7 @@
         right: 0;
         z-index: 1000;
         display: flex;
+        height: 100px;
         align-items: center;
         justify-content: space-between;
         padding: 2rem 5%;
@@ -83,7 +85,7 @@
         justify-content: center;
         align-items: start;
         flex-direction: column;
-        padding: 50px 20px;
+        padding: 150px 20px;
         margin-top: 100px;
     }
 
@@ -149,7 +151,7 @@
     /* Social Icons */
     #social {
         text-align: center;
-        margin: 5px 100px;
+        margin: -50px 100px;
     }
 
     #social img {
@@ -161,48 +163,127 @@
         transform: scale(1.2);
     }
 
-    /* Assignments Section */
-    .secAssign section {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: #222;
-        margin-bottom: 10px;
-        border-radius: 8px;
+
+    #assi {
+        padding: 100px 20px;
+        text-align: center;
+        background-color: #02011B;
+        color: white;
     }
 
-    .secAssign section img {
-        border-radius: 8px;
+
+    #Assignment {
+        font-size: 42px;
+        margin-bottom: 30px;
+        color: #007BFF;
     }
 
-    .secAssign section nav ul {
+
+    .secAssign {
         display: flex;
-        gap: 10px;
+        flex-direction: column;
+        gap: 20px;
     }
+
+    /* Assignment Card */
+    .secAssign > section {
+        background: repeating-conic-gradient(from var(--a),#02011B 0%, #020728 25%, #041559 50%, #040438 75%,blue 90%);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s;
+        font-size: 20px;
+        animation: animate 4s linear infinite;
+    }
+    @property --a {
+        syntax: "<angel>";
+        inherits: false;
+        initial-value: 0deg;
+
+    }
+    @keyframes animate {
+        0%{
+            --a: 0deg;
+        }
+        /*50%{*/
+        /*    --a: 90deg;*/
+        /*}*/
+        75%{
+            --a: 120deg;
+        }
+        100%{
+            --a: 180deg;
+        }
+    }
+
+    .secAssign > section:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .secAssign > section div {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .secAssign img {
+        height: 30px;
+        margin-right: 10px;
+    }
+
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin-top: -30px;
+        margin-left: 1200px;
+    }
+
+    nav li {
+        margin-left: 80px;
+
+
+    }
+
+    nav img {
+        height: 20px;
+        transition: opacity 0.2s;
+    }
+
+    nav img:hover {
+        opacity: 0.7; /
+    }
+
 
     /* Projects Section */
     #pro {
-        text-align: center; /* Center the section title and content */
-        margin: 40px; /* Adds margin around the main section */
-        background-color: #2c2c2c; /* Dark background for contrast */
-        padding: 20px; /* Padding around the section */
-        border-radius: 10px; /* Rounded corners */
+        text-align: center;
+        margin: 40px;
+        background-color: #2c2c2c;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 100px;
     }
 
-
+    #Project{
+        margin-top: 50px;
+    }
     .secPro {
         display: grid;
         grid-template-columns: repeat(4, 2fr);
         gap: 60px;
     }
 
-    /* Styles for individual project cards */
+
     .secPro>div {
-        background-color: #02011B; /* Darker background for cards */
+        background-color: #02011B;
         border-radius: 8px;
-        padding: 20px; /* Padding inside each card */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-        transition: transform 0.2s; /* Transition for hover effects */
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
     }
 
     .secPro>div:hover {
@@ -219,34 +300,41 @@
         border-radius: 5px;
     }
 
-    /* Styles for headings and buttons */
+
     .secPro h1 {
-        font-size: 1.2em; /* Adjust heading size */
-        margin: 10px 0; /* Margin around headings */
-        color: #e0e0e0; /* Light color for headings */
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: #e0e0e0;
     }
 
     .secPro button {
-        padding: 8px 12px; /* Padding inside buttons */
-        background-color: #007bff; /* Button color */
-        color: white; /* Text color */
-        border: none; /* No border */
-        border-radius: 5px; /* Rounded corners */
-        cursor: pointer; /* Pointer on hover */
-        transition: background-color 0.3s, transform 0.2s; /* Transition for button */
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
     }
 
     .secPro button:hover {
-        background-color: #0056b3; /* Darker shade on hover */
-        transform: scale(1.05); /* Slightly enlarge button on hover */
+        background-color: #0056b3;
+        transform: scale(1.05);
     }
     .secPro>div>div>img{
         align-items: center;
         width: 50px;
         height: 50px;
     }
+    #About{
+        margin-top: 150px;
+    }
+    #Abouts{
+        margin-top: 200px;
+        text-align: center;
+    }
     .secAbout{
-        margin-top: 100px;
+        margin-top: 50px;
     }
     /* About Section */
     .secAbout div {
@@ -261,7 +349,16 @@
         margin-top: 10px;
     }
 
+
+
     /* Skills Section */
+
+    #skills{
+        margin-top: 200px;
+    }
+    #Skill{
+        text-align: center;
+    }
     .secSkill div {
         padding: 20px;
         background-color: #1e1e1e;
@@ -270,6 +367,10 @@
     }
 
     /* Gallery Section */
+
+    #secGallery{
+        padding-top: 150px;
+    }
     #secGallery div {
         display: flex;
         gap: 10px;
@@ -289,6 +390,11 @@
     }
 
     /* Events Section */
+
+    #eve{
+        padding-top: 150px;
+        text-align: center;
+    }
     .secEvent div {
         padding: 20px;
         background-color: #1e1e1e;
@@ -297,10 +403,11 @@
     }
 
     /* Footer */
+
     #footer {
         background-color: #1e1e1e;
-        padding: 20px;
         text-align: center;
+        padding-top: 100px;
     }
 
     #footer>nav>ul {
@@ -328,7 +435,7 @@
     }
 
 
-    /* Media Queries for responsiveness */
+
     @media (max-width: 768px) {
         #menu-icon{
             display: block;
@@ -373,23 +480,25 @@
         }
 
         #pro {
-            margin: 20px; /* Reduce margin on smaller screens */
+            margin: 20px;
         }
 
         .secPro {
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column size */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         }
 
-        .secPro h1 {
-            font-size: 1.1em; /* Slightly smaller heading on smaller screens */
+        .secPro>h1 {
+            font-size: 1.1em;
         }
-        .secAssign section {
-            flex-direction: column;
-            align-items: center;
+        #Assignment {
+            font-size: 28px;
         }
 
-        .secAssign section nav ul {
-            justify-content: center;
+        nav>img {
+            height: 18px;
+        }
+        nav ul {
+            margin-left: 250px;
         }
 
         #secGallery div {
@@ -403,24 +512,24 @@
 
     @media (max-width: 480px) {
         .navbar a {
-            font-size: 16px; /* Adjust font size */
-            margin-left: 2rem; /* Adjust margin */
+            font-size: 16px;
+            margin-left: 2rem;
         }
 
         #header_text {
-            font-size: 18px; /* Adjust font size */
+            font-size: 18px;
         }
 
         #name {
-            font-size: 24px; /* Adjust font size */
+            font-size: 24px;
         }
 
         #About-me {
-            font-size: 28px; /* Adjust font size */
+            font-size: 28px;
         }
 
         #tex {
-            font-size: 18px; /* Adjust font size */
+            font-size: 18px;
         }
         #my {
             width: 60%;
@@ -435,8 +544,12 @@
             width: 100%;
         }
 
-        .secAssign section {
-            flex-direction: column;
+        #Assignment {
+            font-size: 24px;
+        }
+
+        .secAssign > section {
+            padding: 10px;
         }
         #menu-icon{
             display: block;
@@ -456,16 +569,16 @@
     }
 
     @media (max-width: 992px) {
-        #my {
-            width: 80%;
-            max-width: 200px;
-            height: auto;
-            border: 2px solid #2840e3;
-            border-radius: 50%;
-            margin-top: -450px;
-            margin-left: 600px;
-            box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        }
+        /*#my {*/
+        /*    width: 80%;*/
+        /*    max-width: 200px;*/
+        /*    height: auto;*/
+        /*    border: 2px solid #2840e3;*/
+        /*    border-radius: 50%;*/
+        /*    margin-top: -450px;*/
+        /*    margin-left: 600px;*/
+        /*    box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;*/
+        /*}*/
         #social{
             margin-top: 100px;
         }
@@ -491,11 +604,14 @@
     <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
-        <a href="" class="">Home</a>
-        <a href="" class="">About</a>
-        <a href="" class="">Projects</a>
-        <a href="" class="">Assignment</a>
-        <a href="" class="">Contact</a>
+        <a href="index.html#hero" class="">Home</a>
+        <a href="index.html#assi" class="">Assignment</a>
+        <a href="index.html#pro" class="">Projects</a>
+        <a href="index.html#Abouts" class="">About</a>
+        <a href="index.html#skills" class="">Skill</a>
+        <a href="index.html#secGallery" class="">Gallery</a>
+        <a href="index.html#eve" class="">Event</a>
+        <a href="index.html#footer" class="">Contact</a>
     </nav>
 </header>
 <!--        ***  hero section  ****-->
