@@ -226,7 +226,7 @@
 
 
     .secAssign > section {
-        background: repeating-conic-gradient(from var(--a),#02011B 0%, #020728 25%, #482d4b 50%, #040438 75%,blue 90%);
+        background: repeating-conic-gradient(from var(--a), #f7f7fa 0%, #020728 25%, #948294 50%, #040438 75%,blue 90%);
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 15px;
@@ -354,24 +354,24 @@
     }
 
 
-    .secPro h1 {
+    .secPro>h1 {
         font-size: 1.2em;
         margin: 10px 0;
         color: #e0e0e0;
     }
 
-    .secPro button {
+    .secPro>div>div>button {
         padding: 8px 12px;
         background-color: #007bff;
-        color: white;
+        color: black;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s, transform 0.2s;
     }
 
-    .secPro button:hover {
-        background-color: #0056b3;
+    .secPro>div>div>button:hover {
+        background-color: yellow;
         transform: scale(1.05);
     }
     .secPro>div>div>img{
@@ -471,44 +471,77 @@
 
     /* Gallery Section */
 
-    #secGallery {
+    /*#secGallery {*/
+    /*    display: grid;*/
+    /*    grid-template-columns: repeat(2, 1fr);*/
+    /*    gap: 20px;*/
+    /*    padding: 20px;*/
+    /*}*/
+
+
+    /*#secGallery>div {*/
+    /*    border-radius: 15px;*/
+    /*    transition: transform 0.3s;*/
+    /*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+    /*    margin-left: 250px;*/
+    /*}*/
+
+    /*#secGallery>div>img {*/
+    /*    width: 50%;*/
+    /*    height: auto;*/
+    /*    border: 4px solid darkred;*/
+    /*    display: block;*/
+    /*    border-radius: 20px;*/
+
+
+    /*}*/
+
+    /*#secGallery div:hover {*/
+    /*    transform: scale(1.1);*/
+    /*    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);*/
+    /*}*/
+
+
+    /*#galle {*/
+    /*    text-align: center;*/
+    /*    font-size: 30px;*/
+    /*    margin: 30px 0;*/
+    /*    color: white;*/
+    /*    padding-top: 100px;*/
+    /*}*/
+
+    .main {
+        justify-content: center;
+        align-items: center;
+        margin-top: -100px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
+        grid-template-rows:  repeat(auto-fill,minmax(400px,400px));
+        column-gap: 200px;
+        row-gap: 100px;
+        margin-left: 480px;
     }
+    #secGallery>div{
 
-
-    #secGallery>div {
-        border-radius: 15px;
-        transition: transform 0.3s;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-left: 250px;
     }
 
     #secGallery>div>img {
-        width: 50%;
+        margin-top: -100px;
+        width: 300px;
         height: auto;
-        border: 4px solid darkred;
-        display: block;
+        object-fit: cover;
+        object-position: center;
         border-radius: 20px;
-
-
-    }
-
-    #secGallery div:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
 
     #galle {
-        text-align: center;
-        font-size: 30px;
-        margin: 30px 0;
+        padding-top: 150px;
+        text-align: start;
         color: white;
-        padding-top: 100px;
+        margin-bottom: 30px;
+        font-size: 2.5em;
     }
+
 
     /* Events Section */
 
@@ -535,20 +568,33 @@
     #footer {
         background-color: #1e1e1e;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 50px;
     }
 
-    #footer>nav>ul {
+    #footer>section>div>nav>ul {
         display: flex;
         justify-content: center;
-        margin-left: 200px;
+        margin-left: 180px;
         gap: 20px;
+
     }
 
-    #footer>nav>ul>li{
-        margin-left: 200px;
+    #footer>section>div>nav>ul>li{
+        margin-left: -150px;
+        margin-top: 50px;
+        width: 300px;
+        height: auto;
     }
 
+    #footer>section>div>nav>ul>li>a>img{
+        width: 50px;
+        height: auto;
+        border-radius: 40px;
+    }
+    #footer>section:nth-child(2)>div:nth-child(2){
+        margin-left: -80px;
+        margin-top: 20px;
+    }
     #footer>nav>ul>li>img:hover {
         transform: scale(1.2);
 
@@ -557,9 +603,54 @@
     #footer>section {
         margin-top: 20px;
     }
+    #section3>div{
+        width: 400px;
+        height: fit-content;
+        background: rgb(52,52,52);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 20px;
+        border: 2px solid #fff5ee;
+        margin-left: 650px;
+    }
 
     #section3 .form {
         margin-bottom: 20px;
+    }
+    #form1>span>label{
+        padding-top: 800px;
+    }
+
+    #email{
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    #email:hover{
+        border: 2px solid white;
+        background: #a9a9a9 ;
+    }
+
+    #emails{
+        margin-left: 70px;
+    }
+
+    #emails:hover{
+        border: 2px solid white;
+        background: #a9a9a9 ;
+    }
+
+    #massage{
+        margin-left: 30px;
+    }
+
+    #massage:hover{
+        border: 2px solid white;
+        background: #a9a9a9 ;
+    }
+
+    #btn:hover{
+        border: 2px solid white;
     }
 
     input {
@@ -604,8 +695,8 @@
         }
 
         #my {
-            width: 80%;
-            max-width: 300px;
+            width: 60%;
+            max-width: 200px;
             height: auto;
             border: 2px solid #2840e3;
             border-radius: 50%;
@@ -655,30 +746,34 @@
         /*#secGallery>div {*/
         /*    flex-direction: column;*/
         /*}*/
-        #secGallery {
+        .main {
+            justify-content: center;
+            align-items: center;
+            margin-top: -100px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            padding: 20px;
-        }
-
-
-        #secGallery>div {
-            border-radius: 15px;
-            transition: transform 0.3s;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-left: 10px;
+            grid-template-rows:  repeat(auto-fill,minmax(400px,400px));
+            column-gap: 200px;
+            row-gap: 100px;
+            margin-left: 180px;
         }
         #secGallery>div>img {
-            width: 200px;
+            margin-top: -150px;
+            width: 300px;
             height: auto;
-            border: 2px solid darkred;
-            display: block;
+            object-fit: cover;
+            object-position: center;
             border-radius: 20px;
-
 
         }
 
+
+        #galle {
+            padding-top: 100px;
+            text-align: start;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
         #footer nav ul {
             flex-direction: column;
         }
@@ -706,8 +801,8 @@
             font-size: 18px;
         }
         #my {
-            width: 60%;
-            max-width: 300px;
+            width: 40%;
+            max-width: 200px;
             height: auto;
             border: 2px solid #2840e3;
             border-radius: 50%;
@@ -744,28 +839,32 @@
         #menu-icon{
             display: block;
         }
-        #secGallery {
+        .main {
+            justify-content: center;
+            align-items: center;
+            margin-top: -100px;
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 10px;
-            padding: 20px;
-        }
-
-
-        #secGallery>div {
-            border-radius: 15px;
-            transition: transform 0.3s;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-left: -20px;
+            grid-template-rows:  repeat(3,minmax(200px,200px));
+            column-gap: 100px;
+            row-gap: 100px;
+            margin-left: 20px;
         }
         #secGallery>div>img {
+            margin-top: 0px;
             width: 300px;
             height: auto;
-            border: 4px solid darkred;
-            display: block;
-            border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
+
+        }
 
 
+        #galle {
+            padding-top: 100px;
+            text-align: start;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
         }
     }
 
@@ -1179,22 +1278,17 @@
 </main>
 
 <!--        **** Gallery section  *****-->
-<main>
+<main class="main">
     <h1 id="galle">Gallery</h1>
     <section id="secGallery">
         <div data-aos="flip-left"
              data-aos-easing="ease-out-cubic"
              data-aos-duration="2000">
-            <img src="assets/Gallery/setificate.jpeg">
+            <img src="assets/Gallery/my.jpeg">
             <img src="assets/Gallery/oran.jpeg">
             <img src="assets/Gallery/my2.jpeg">
-        </div>
-
-        <div data-aos="flip-left"
-             data-aos-easing="ease-out-cubic"
-             data-aos-duration="2000">
             <img src="assets/Gallery/group.jpeg">
-            <img src="assets/Gallery/my.jpeg">
+            <img src="assets/Gallery/setificate.jpeg">
             <img src="assets/Gallery/innove.jpeg">
         </div>
 
@@ -1287,20 +1381,20 @@
 
                 </div>
 
-                <div class="form">
+                <div class="form" id="form2">
                     <span>
                         <label for="emails">To  :</label>
                         <input type="emails" id="emails" placeholder="Enter Email"><br><br>
                     </span>
                 </div>
 
-                <div class="form">
+                <div class="form" id="form3">
                     <span>
                         <label for="massage">Massage  :</label>
                         <input type="massage" id="massage" placeholder="Enter your massage">
                     </span>
                     <br><br>
-                    <button>Send</button>
+                    <button id="btn">Send</button>
                 </div>
             </div>
 
