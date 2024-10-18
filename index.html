@@ -313,7 +313,7 @@
     #pro {
         text-align: center;
         margin: 40px;
-        background-color: #2c2c2c;
+        background-color: #02011B;
         padding: 20px;
         border-radius: 10px;
         padding-top: 100px;
@@ -709,7 +709,7 @@
         }
 
         .secPro {
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
         }
 
         .secPro>h1 {
@@ -974,6 +974,126 @@
             margin: 20px auto;
             box-shadow: rgba(245, 6, 6, 0.25) 0px 54px 55px, rgb(186, 25, 231) 0px -12px 30px, rgba(95, 241, 47, 0.56) 0px 4px 6px, rgba(9, 28, 241, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
+
+        #pro {
+            margin: 20px;
+        }
+
+        .secPro {
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+        }
+
+        .secPro>h1 {
+            font-size: 1.1em;
+        }
+        #Assignment {
+            font-size: 30px;
+        }
+        .secAssign>section>div>span{
+            font-size: 15px;
+        }
+        nav>img {
+            height: 18px;
+            width: 12px;
+        }
+        nav>ul {
+            margin-left: 160px;
+
+        }
+        nav>li {
+            margin-left: 10px;
+            width: 5px;
+            height: 5px;
+        }
+        nav>li>a {
+            width: 5px;
+            height: 5px;
+        }
+        #assi {
+            font-size: 5px;
+            color: white;
+        }
+
+        /*#secGallery>div {*/
+        /*    flex-direction: column;*/
+        /*}*/
+        .main {
+            justify-content: center;
+            align-items: center;
+            margin-top: -100px;
+            display: grid;
+            grid-template-rows:  repeat(auto-fill,minmax(400px,400px));
+            column-gap: 200px;
+            row-gap: 100px;
+            margin-left: 180px;
+        }
+        #secGallery>div>img {
+            margin-top: -150px;
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+
+        }
+
+
+        #galle {
+            padding-top: 100px;
+            text-align: start;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        #section3>div{
+            width: 300px;
+            height: fit-content;
+            background: rgb(52,52,52);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid #fff5ee;
+            margin-left: 100px;
+        }
+        #footer nav ul {
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        /*#form1>span>label{*/
+        /*    padding-top: 100px;*/
+        /*}*/
+
+        #email{
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        #email:hover{
+            border: 2px solid white;
+            background: #a9a9a9 ;
+        }
+
+        #emails{
+            margin-left: 20px;
+        }
+
+        #emails:hover{
+            border: 2px solid white;
+            background: #a9a9a9 ;
+        }
+
+        #massage{
+            margin-left: 0px;
+        }
+
+        #massage:hover{
+            border: 2px solid white;
+            background: #a9a9a9 ;
+        }
+
+        #btn:hover{
+            border: 2px solid white;
+        }
     }
 
     @media (max-width: 992px) {
@@ -1000,7 +1120,7 @@
             text-align: center;
             border-radius: 20px;
             border: 2px solid #fff5ee;
-            margin-left: 20px;
+            margin-left: 100px;
         }
         #footer>section:first-child>div>nav>ul {
             margin-top: 10px;
