@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 03</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI' ,sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #eaeaea;
+    }
+
+    #testassi {
+        max-width: 700px;
+        max-height: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: gray;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    #testassi>h1 {
+        text-align: center;
+        color: black;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .secAssigns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background: #FF7300;
+    }
+
+
+    section {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .secAssigns>section:hover {
+        transform: scale(1.02);
+    }
+
+    .secAssigns>section>div>span {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: red;
+    }
+
+
+    .btn {
+        background-color: #00b7eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 20px;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+    }
+
+
+    @media (max-width: 600px) {
+        .btn {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+    }
+</style>
+
+
+<body>
+<main id="testassi">
+
+    <h1 id="Assignments">Assignment</h1>
+    <section class="secAssigns">
+        <!--        **** assignment 01   *****-->
+        <section >
+            <div>
+                <span>Assignment 03</span>
+            </div>
+
+            <div>
+                <button class="btn" ><a href="../cases/case_01.html" >Case 01</a></button>
+                <button class="btn"><a href="../cases/case_2.html" >Case 02</a></button>
+                <button class="btn"><a href="../cases/case_03.html" >Case 03</a></button>
+                <button class="btn"><a href="../cases/case_4.html" >Case 04</a></button>
+                <button class="btn"><a href="../cases/case_5.html" >Case 05</a></button>
+                <button class="btn"><a href="../cases/case_6.html" >Case 06</a></button>
+            </div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>
